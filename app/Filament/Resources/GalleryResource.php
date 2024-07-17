@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\GalleryResource\Pages;
 use App\Filament\Resources\GalleryResource\RelationManagers;
+use App\Models\Category;
 use App\Models\Gallery;
 use Filament\Actions\ActionGroup;
 use Filament\Forms;
@@ -35,8 +36,19 @@ class GalleryResource extends Resource
                 Forms\Components\TextInput::make('title_fi')
                     ->maxLength(255)
                     ->default(null),
+                Forms\Components\Select::make('category')
+                    ->options([
+                        1 => 'Image',
+                        2 => 'Video',
+                    ])
+                    ->required(),
                 Forms\Components\FileUpload::make('image')
                     ->directory('gallery')
+                    ->hint('* Image size should be 870*920 px')
+                    ->hintColor('danger')
+                    ->imageEditor()
+                    ->imageEditorViewportWidth('870')
+                    ->imageEditorViewportHeight('920')
                     ->image(),
                 Forms\Components\TextInput::make('video_link')
                     ->maxLength(255)
@@ -59,6 +71,11 @@ class GalleryResource extends Resource
                 Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
+                Tables\Columns\SelectColumn::make('category')
+                    ->options([
+                        1 => 'Image',
+                        2 => 'Video',
+                    ]),
                 Tables\Columns\ToggleColumn::make('status'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

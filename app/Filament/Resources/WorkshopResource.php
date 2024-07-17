@@ -81,6 +81,10 @@ class WorkshopResource extends Resource
                     ->fileAttachmentsDirectory('workshop')
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('image')
+                    ->hint('* Image size should be 870*580 px')
+                    ->hintColor('danger')
+                    ->imageEditorViewportWidth('870')
+                    ->imageEditorViewportHeight('580')
                     ->required()
                     ->directory('workshop')
                     ->image(),

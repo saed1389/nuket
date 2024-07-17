@@ -16,6 +16,7 @@ class Service extends Model
         'slug_en',
         'title_fi',
         'slug_fi',
+        'category',
         'description',
         'description_en',
         'description_fi',

@@ -1,52 +1,43 @@
 <div>
     <header class="main-header header-style-two">
-
-        <!--Header-Upper-->
         <div class="header-upper">
             <div class="outer-container clearfix">
-
                 <div class="pull-left logo-box">
                     <div class="logo"><a href="/"><img src="{{ asset('assets/images/logo.png') }}" alt="" title=""></a></div>
                 </div>
-
                 <div class="nav-outer clearfix">
-                    <!--Mobile Navigation Toggler-->
                     <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
-                    <!-- Main Menu -->
                     <nav class="main-menu navbar-expand-md">
                         <div class="navbar-header">
-                            <!-- Toggle Button -->
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
                         </div>
-
                         <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
                             <ul class="navigation clearfix">
-                                <li class="dropdown has-mega-menu"><a href="#"><span>Courses <i class="fa fa-arrow-down"></i></span></a>
+                                <li class="dropdown has-mega-menu"><a href="#"><span>{{ __('homePage.categories') }} <i class="fa fa-arrow-down"></i></span></a>
                                     <div class="mega-menu">
-                                        <!-- Upper Box -->
                                         <div class="upper-box">
                                             <div class="page-links-box">
-                                                <a href="course.html" class="link"><span class="icon flaticon-bullhorn"></span>Marketing</a>
-                                                <a href="course-2.html" class="link"><span class="icon flaticon-cyclist"></span>Lifestyle</a>
-                                                <a href="course-3.html" class="link"><span class="icon flaticon-bar-chart"></span>Business</a>
-                                                <a href="course-4.html" class="link"><span class="icon flaticon-software"></span>Software</a>
-                                                <a href="course-3.html" class="link"><span class="icon flaticon-atom"></span>Science</a>
-                                                <a href="course.html" class="link"><span class="icon flaticon-webpage"></span>IT Management</a>
-                                                <a href="course-2.html" class="link"><span class="icon flaticon-language"></span>Language</a>
-                                                <a href="course-3.html" class="link"><span class="icon flaticon-team"></span>Human Resources</a>
-                                                <a href="course-4.html" class="link"><span class="icon flaticon-healthcare"></span>Health Care</a>
+                                                @php
+                                                    $locale = app()->getLocale();
+                                                    $categories = \App\Models\Category::where('status', 1)->get()
+                                                @endphp
+                                                @foreach($categories as $category)
+                                                    <a href="@if($locale == 'tr') {{ $category->slug }} @else {{ $category->{'slug_' . $locale} }} @endif" class="link" wire:key="{{ $category->id }}">
+                                                        @if($locale == 'tr') {{ $category->name }} @else {{ $category->{'name_' . $locale} }} @endif
+                                                    </a>
+                                                @endforeach
+
                                             </div>
                                         </div>
-                                        <!-- Lower Box -->
                                         <div class="lower-box">
-                                            <h3>Become an Instructor</h3>
+                                            <h3>{{ __('homePage.categories') }}</h3>
                                             <div class="text">Top instructors from around the Neque convallis a cras semper auctor. <br> Libero id faucibus nisl tincidunt egetnvallis </div>
                                             <div class="btn-box">
-                                                <a href="#" class="theme-btn btn-style-five">Start teaching today</a>
+                                                <a wire:navigate href="courses/categories" class="theme-btn btn-style-five">{{ __('homePage.See All Categories') }}</a>
                                             </div>
                                             <div class="side-icon">
                                                 <img src="{{ asset('assets/images/resource/mega-menu-icon.png') }}" alt="" />
@@ -54,51 +45,39 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class=""><a wire:navigate class="{{ request()->is('/') ? 'text-success' : '' }}" href="/">Home</a></li>
-                                <li class="dropdown"><a href="#">About</a>
+                                <li><a href="/" class="{{ request()->is('/') ? 'text-success' : '' }}">{{ __('homePage.home') }}</a></li>
+                                <li class="dropdown"><a wire:navigate href="#">{{ __('homePage.About us') }}</a>
                                     <ul>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="faq.html">Faq</a></li>
-                                        <li><a href="teacher.html">Teacher</a></li>
-                                        <li><a href="profile.html">User Profile</a></li>
-                                        <li><a href="membership.html">Membership</a></li>
-                                        <li class="dropdown"><a href="#">Events</a>
-                                            <ul>
-                                                <li><a href="event.html">Events</a></li>
-                                                <li><a href="event-detail.html">Events Detail</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><a wire:navigate href="">{{ __('homePage.About us') }}</a></li>
+                                        <li><a wire:navigate href="">{{ __('homePage.Solution partners') }}</a></li>
+                                        <li><a wire:navigate href="">{{ __('homePage.projects') }}</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown"><a href="#">Courses</a>
+                                <li><a wire:navigate href="{{ url('courses') }}">{{ __('homePage.Courses') }}</a></li>
+                                <li class="dropdown"><a href="#">{{ __('homePage.Services') }}</a>
                                     <ul>
-                                        <li><a href="{{ url('categories') }}">Categories</a></li>
-                                        <li><a href="{{ url('courses') }}">Courses</a></li>
-                                        <li><a href="course-3.html">Courses 03</a></li>
-                                        <li><a href="course-4.html">Courses 04</a></li>
-                                        <li><a href="course-detail.html">Courses Detail</a></li>
+                                        <li><a wire:navigate href="">{{ __('homePage.coaching') }}</a></li>
+                                        <li><a wire:navigate href="">{{ __('homePage.education') }}</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown"><a href="#">Blog</a>
+                                <li><a wire:navigate href="">{{ __('homePage.workshops') }}</a></li>
+                                <li class="dropdown"><a href="#">{{ __('homePage.gallery') }}</a>
                                     <ul>
-                                        <li><a href="blog.html">Our Blog</a></li>
-                                        <li><a href="blog-list.html">Blog List</a></li>
-                                        <li><a href="blog-detail.html">Blog Detail</a></li>
-                                        <li><a href="not-found.html">Not Found</a></li>
+                                        <li><a wire:navigate href="">{{ __('homePage.images') }}</a></li>
+                                        <li><a wire:navigate href="">{{ __('homePage.videos') }}</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Contact</a></li>
-                                <li><a href="donation.html">Donation</a></li>
+                                <li><a wire:navigate href="">{{ __('homePage.blog') }}</a></li>
+                                <li><a wire:navigate href="">{{ __('homePage.contact') }}</a></li>
                             </ul>
                         </div>
                     </nav>
 
-                    <!-- Main Menu End-->
+
                     <div class="outer-box clearfix">
 
-                        <!-- Search -->
                         <div class="search-box">
-                            <form method="post" action="contact.html">
+                            <form method="post" action="">
                                 <div class="form-group">
                                     <input type="search" name="search-field" value="" placeholder="Online course" required>
                                     <button type="submit"><span class="icon fa fa-search"></span></button>
@@ -111,11 +90,11 @@
                                 <select class="form-select" name="lang" id="lang" onchange="this.form.submit()">
                                     <option disabled>Language</option>
 
-                                    <option value="tr" @if (Session::get('locale', 'tr') == 'tr') selected @endif> Turkish</option>
+                                    <option value="tr" @if (session('locale') ? session('locale') == 'tr' : $app == 'tr') selected @endif> Turkish</option>
 
-                                    <option value="en" @if (session('locale') == 'en') selected @endif> English</option>
+                                    <option value="en" @if (session('locale') ? session('locale') == 'en' : $app == 'en') selected @endif> English</option>
 
-                                    <option value="fi" @if (session('locale') == 'fi') selected @endif> Fine</option>
+                                    <option value="fi" @if (session('locale') ? session('locale') == 'fi' : $app == 'fi') selected @endif> Fine</option>
                                 </select>
                             </form>
                         </div>

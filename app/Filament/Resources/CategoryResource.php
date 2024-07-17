@@ -73,7 +73,11 @@ class CategoryResource extends Resource
                             ->required(),
                         Forms\Components\FileUpload::make('image')
                             ->label('Category image')
+                            ->hint('* Image size should be 870*940 px')
+                            ->hintColor('danger')
                             ->image()
+                            ->imageEditorViewportWidth('870')
+                            ->imageEditorViewportHeight('940')
                             ->imageEditor()
                             ->directory('categories'),
                         Forms\Components\TextInput::make('support_video')

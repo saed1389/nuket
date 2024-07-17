@@ -81,6 +81,7 @@ class AdditiveResource extends Resource
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('image')
                     ->directory('additive')
+                    ->imageEditor()
                     ->image(),
                 Forms\Components\TextInput::make('support_video')
                     ->maxLength(255)

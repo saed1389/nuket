@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ServiceResource\Pages;
 use App\Filament\Resources\ServiceResource\RelationManagers;
+use App\Models\Category;
 use App\Models\Service;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -66,6 +67,13 @@ class ServiceResource extends Resource
                     ->unique(Service::class, 'slug_fi', ignoreRecord: true)
                     ->maxLength(255)
                     ->default(null),
+                Forms\Components\Select::make('category')
+                    ->label('Category')
+                    ->required()
+                    ->options([
+                        1 => 'Coaching',
+                        2 => 'Education',
+                    ]),
                 Forms\Components\MarkdownEditor::make('description')
                     ->label('Description (tr)')
                     ->fileAttachmentsDirectory('services')
@@ -81,6 +89,11 @@ class ServiceResource extends Resource
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('image')
                     ->directory('services')
+                    ->imageEditor()
+                    ->hint('* Image size should be 870*580 px')
+                    ->hintColor('danger')
+                    ->imageEditorViewportWidth('870')
+                    ->imageEditorViewportHeight('580')
                     ->required()
                     ->image(),
                 Forms\Components\TextInput::make('link')
@@ -104,6 +117,11 @@ class ServiceResource extends Resource
                 Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
+                Tables\Columns\SelectColumn::make('category')
+                    ->options([
+                        1 => 'Coaching',
+                        2 => 'Education',
+                    ]),
                 Tables\Columns\ToggleColumn::make('status'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

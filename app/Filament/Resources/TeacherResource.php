@@ -58,11 +58,16 @@ class TeacherResource extends Resource
                             ->fileAttachmentsDirectory('teachers')
                             ->columnSpanFull(),
                         Forms\Components\FileUpload::make('image')
+                            ->hint('* Image size should be 800*920 px')
+                            ->hintColor('danger')
+                            ->image()
                             ->imageEditor()
                             ->directory('teachers')
-                            ->image(),
+                            ->imageEditorViewportWidth('800')
+                            ->imageEditorViewportHeight('920'),
                         Forms\Components\TextInput::make('support_video')
                             ->maxLength(255)
+                            ->url()
                             ->default(null),
                         Forms\Components\Toggle::make('status')
                             ->default(true)

@@ -13,6 +13,7 @@ class Gallery extends Model
         'title',
         'title_en',
         'title_fi',
+        'category',
         'image',
         'video_link',
         'support_video',

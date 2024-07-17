@@ -48,7 +48,6 @@ class CourseResource extends Resource
                                 $set('slug', Str::slug($state));
                             })
                             ->maxLength(255),
-
                         TextInput::make('slug')
                             ->label('Slug (tr)')
                             ->maxLength(255)
@@ -56,7 +55,6 @@ class CourseResource extends Resource
                             ->dehydrated()
                             ->unique(Course::class, 'slug', ignoreRecord: true)
                             ->required(),
-
                         TextInput::make('name_en')
                             ->label('Course Name(en)')
                             ->live(onBlur: true)
@@ -67,7 +65,6 @@ class CourseResource extends Resource
                                 $set('slug_en', Str::slug($state));
                             })
                             ->maxLength(255),
-
                         TextInput::make('slug_en')
                             ->label('Slug (en)')
                             ->maxLength(255)
@@ -75,7 +72,6 @@ class CourseResource extends Resource
                             ->dehydrated()
                             ->unique(Course::class, 'slug_en', ignoreRecord: true)
                             ->maxLength(255),
-
                         TextInput::make('name_fi')
                             ->label('Course Name(fi)')
                             ->live(onBlur: true)
@@ -86,7 +82,6 @@ class CourseResource extends Resource
                                 $set('slug_fi', Str::slug($state));
                             })
                             ->maxLength(255),
-
                         TextInput::make('slug_fi')
                             ->label('Slug (fi)')
                             ->maxLength(255)
@@ -94,31 +89,25 @@ class CourseResource extends Resource
                             ->dehydrated()
                             ->unique(Course::class, 'slug_fi', ignoreRecord: true)
                             ->maxLength(255),
-
                         MarkdownEditor::make('description')
                             ->label('Description (tr)')
                             ->columnSpanFull()
                             ->required(),
-
                         MarkdownEditor::make('description_en')
                             ->label('Description (en)')
                             ->columnSpanFull(),
-
                         MarkdownEditor::make('description_fi')
                             ->label('Description (fi)')
                             ->columnSpanFull()
                             ->columnSpanFull(),
-
                         TextInput::make('intro_video')
                             ->label('Intro Video Link')
                             ->url(),
-
                         TextInput::make('support_video')
                             ->label('Support Video Link')
                             ->url(),
                     ])->columns(2)
                 ])->columnSpan(2),
-
                 Forms\Components\Group::make()->schema([
                     Forms\Components\Section::make('Course Category')->schema([
                         Select::make('category_id')
@@ -128,7 +117,6 @@ class CourseResource extends Resource
                             ->preload()
                             ->relationship('category', 'name')
                     ]),
-
                     Forms\Components\Section::make('Instructor Name')->schema([
                         Select::make('teacher_id')
                             ->label('Instructor Name')
@@ -137,7 +125,6 @@ class CourseResource extends Resource
                             ->preload()
                             ->relationship('teacher', 'name')
                     ]),
-
                     Forms\Components\Section::make('Course Level')->schema([
                         Select::make('level_id')
                             ->label('Course Level')
@@ -146,44 +133,42 @@ class CourseResource extends Resource
                             ->preload()
                             ->relationship('level', 'name')
                     ]),
-
                     Forms\Components\Section::make('Other Information')->schema([
                         TextInput::make('max_students')
                             ->label('Max Students')
                             ->required()
                             ->minValue(1)
                             ->numeric(),
-
                         TextInput::make('price')
                             ->label('Price')
                             ->required()
                             ->numeric()
                             ->minValue(0)
-                            ->prefix('TRY'),
-
+                            ->prefix('EUR'),
                         TextInput::make('discount')
                             ->label('Discount')
                             ->numeric()
                             ->minValue(0)
-                            ->prefix('TRY'),
-
+                            ->prefix('EUR'),
                         Forms\Components\DatePicker::make('course_start_date')
                             ->label('Course Start Date')
                             ->native(false)
                             ->displayFormat('d/m/Y')
                             ->minDate(now()),
-
                         TextInput::make('course_duration')
                             ->label('Course Duration'),
-
                         Forms\Components\FileUpload::make('image')
                             ->directory('courses')
+                            ->hint('* Image size should be 800*920 px')
+                            ->hintColor('danger')
+                            ->imageEditor()
+                            ->imageEditorViewportWidth('740')
+                            ->imageEditorViewportHeight('870')
                             ->image()
                             ->label('Image'),
                         Forms\Components\Toggle::make('featured')
                             ->label('Featured')
                             ->default(false),
-
                         Forms\Components\Toggle::make('status')
                             ->label('Status')
                             ->default(true)
@@ -213,7 +198,7 @@ class CourseResource extends Resource
                     ->sortable(),
                 Tables\Columns\TextColumn::make('price')
                     ->sortable()
-                    ->money('TRY')
+                    ->money('EUR')
                     ->searchable(),
                 Tables\Columns\ToggleColumn::make('featured'),
                 Tables\Columns\ToggleColumn::make('status'),
@@ -225,7 +210,7 @@ class CourseResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('discount')
-                    ->money('TRY')
+                    ->money('EUR')
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('created_at')

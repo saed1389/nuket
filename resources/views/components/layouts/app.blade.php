@@ -35,6 +35,7 @@
         <script src="{{ asset('assets/js/nav-tool.js') }}"></script>
         <script src="{{ asset('assets/js/jquery-ui.js') }}"></script>
         <script src="{{ asset('assets/js/script.js') }}"></script>
-    @livewireScripts
+        @livewireScripts
+        <script type="module" src="{{ mix('resources/js/app.js') }}"></script>
     </body>
 </html>

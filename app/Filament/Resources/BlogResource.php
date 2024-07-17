@@ -88,6 +88,11 @@ class BlogResource extends Resource
                 Forms\Components\FileUpload::make('image')
                     ->directory('blog')
                     ->required()
+                    ->hint('* Image size should be 870*940 px')
+                    ->hintColor('danger')
+                    ->imageEditor()
+                    ->imageEditorViewportWidth('870')
+                    ->imageEditorViewportHeight('940')
                     ->image(),
                 Forms\Components\TextInput::make('support_video')
                     ->maxLength(255)

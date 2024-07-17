@@ -2,15 +2,10 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\AdditiveResource\Pages\EditAdditive;
 use App\Filament\Resources\OrderResource\Pages;
-use App\Filament\Resources\OrderResource\RelationManagers;
 use App\Filament\Resources\OrderResource\RelationManagers\AddressRelationManager;
 use App\Models\Course;
 use App\Models\Order;
-use Filament\Actions\ActionGroup;
-use Filament\Actions\ViewAction;
-use Filament\Forms;
 use Filament\Forms\Components\Group;
 use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Placeholder;
@@ -25,13 +20,9 @@ use Filament\Forms\Get;
 use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Actions\DeleteAction;
-use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Columns\SelectColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Number;
 
 class OrderResource extends Resource
@@ -95,13 +86,13 @@ class OrderResource extends Resource
                         Select::make('currency')
                             ->label('Currency')
                             ->options([
+                                'eur' => 'EUR',
                                 'try' => 'TRY',
                                 'usd' => 'USD',
-                                'eur' => 'EUR',
                                 'gbp' => 'GBP',
                             ])
                             ->required()
-                            ->default('try'),
+                            ->default('eur'),
 
                         Textarea::make('notes')
                             ->label('Notes')
@@ -183,7 +174,7 @@ class OrderResource extends Resource
                     ->label('Grand Total')
                     ->numeric()
                     ->sortable()
-                    ->money('TRY'),
+                    ->money('EUR'),
 
                 TextColumn::make('payment_method')
                     ->label('Payment Method')

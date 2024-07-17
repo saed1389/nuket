@@ -221,216 +221,40 @@
             </div>
             <div class="row clearfix">
 
-                <!-- Course Column -->
-                <div class="course-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="image">
-                            <a href="course-detail.html"><img src="{{ asset('assets/images/resource/course-1.jpg') }}" alt="" /></a>
-                        </div>
-                        <div class="lower-content">
-                            <h4><a href="course-detail.html">Growth Mindsets for Teachers and Learners</a></h4>
-                            <div class="uni-name">University of Roehampton</div>
-                            <div class="rating">
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star-o"></span>
-                                <strong>4.9</strong>
-                                <i>(70 Review)</i>
+                @foreach($courses as $course)
+                    <div class="course-block col-lg-4 col-md-6 col-sm-12" wire:key="{{ $course->id }}">
+                        <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="image">
+                                <a href="@if($locale == 'tr') {{ '/courses/'.$course->slug }} @else {{ '/courses/'.$course->{'slug_' . $locale} }} @endif">
+                                    <img src="{{ url('storage', $course->image) }}" alt="" />
+                                </a>
                             </div>
-                            <div class="price">$12 <span>$100.99</span></div>
-                            <div class="clearfix">
-                                <div class="pull-left">
-                                    <div class="hovers">11.5 total hours . All Levels  </div>
-                                </div>
-                                <div class="pull-right">
-                                    <a href="course-detail.html" class="enroll-now">ENROL NOW</a>
+                            <div class="lower-content">
+                                <h4>
+                                    <a href="@if($locale == 'tr') {{ '/courses/'.$course->slug }} @else {{ '/courses/'.$course->{'slug_' . $locale} }} @endif">
+                                        @if($locale == 'tr') {{ $course->name }} @else {{ $course->{'name_' . $locale} }} @endif
+                                    </a>
+                                </h4>
+                                @if($course->discount)
+                                    <div class="price">{{ $course->courrency . ' '.$course->discount }}  <span>{{ $course->courrency . ' '.$course->price }}</span></div>
+                                @else
+                                    <div class="price">{{ $course->courrency . ' '.$course->price }} </div>
+                                @endif
+                                <div class="clearfix">
+
+                                    <div class="pull-right">
+                                        <a href="@if($locale == 'tr') {{ '/courses/'.$course->slug }} @else {{ '/courses/'.$course->{'slug_' . $locale} }} @endif" class="enroll-now">ENROL NOW</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
+                @endforeach
                 <!-- Course Column -->
-                <div class="course-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="image">
-                            <a href="course-detail.html"><img src="{{ asset('assets/images/resource/course-2.jpg') }}" alt="" /></a>
-                        </div>
-                        <div class="lower-content">
-                            <h4><a href="course-detail.html">Programming for Everybody Getting Started with Python</a></h4>
-                            <div class="uni-name">University of Roehampton</div>
-                            <div class="rating">
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star-o"></span>
-                                <strong>4.9</strong>
-                                <i>(70 Review)</i>
-                            </div>
-                            <div class="price">$12 <span>$100.99</span></div>
-                            <div class="clearfix">
-                                <div class="pull-left">
-                                    <div class="hovers">11.5 total hours . All Levels  </div>
-                                </div>
-                                <div class="pull-right">
-                                    <a href="course-detail.html" class="enroll-now">ENROL NOW</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Course Column -->
-                <div class="course-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <div class="image">
-                            <a href="course-detail.html"><img src="{{ asset('assets/images/resource/course-3.jpg') }}" alt="" /></a>
-                        </div>
-                        <div class="lower-content">
-                            <h4><a href="course-detail.html">Introduction to Forensic Science</a></h4>
-                            <div class="uni-name">University of Roehampton</div>
-                            <div class="rating">
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star-o"></span>
-                                <strong>4.9</strong>
-                                <i>(70 Review)</i>
-                            </div>
-                            <div class="price">$12 <span>$100.99</span></div>
-                            <div class="clearfix">
-                                <div class="pull-left">
-                                    <div class="hovers">11.5 total hours . All Levels  </div>
-                                </div>
-                                <div class="pull-right">
-                                    <a href="course-detail.html" class="enroll-now">ENROL NOW</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
     <!-- End Courses Section -->
-
-    <!-- Career Section -->
-    <section class="career-section">
-        <div class="auto-container">
-            <!-- Sec Title -->
-            <div class="sec-title">
-                <h2>Change careers courses <br> Thinking about a career change?</h2>
-            </div>
-
-            <div class="row clearfix">
-
-                <!-- Image Column -->
-                <div class="image-column col-lg-5 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <div class="image titlt" data-tilt data-tilt-max="4">
-                            <img src="{{ asset('assets/images/resource/career.png') }}" alt="" />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Content Column -->
-                <div class="content-column col-lg-7 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <h5>The International Admissions Bulletin</h5>
-                        <div class="text">
-                            <p>Ut enim ad minim veniam aliquip amet, nostrud exercitation ullamco. Pharetra massaultricies mi quis hendrerit. Elit eget gravida cum sociis.Ut enim ad minim veniam aliquip amet, </p>
-                            <p>nostrud exercitation ullamco. Pharetra massaultricies mi quis hendrerit. Elit eget gravida cum sociis.</p>
-                        </div>
-                        <a href="about.html" class="theme-btn btn-style-three">Read it now <span class="fa fa-caret-right"></span></a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- End Career Section -->
-
-    <!-- Skill Section -->
-    <section class="skill-section">
-        <div class="pattern-layer" style="background-image:url({{ asset('assets/images/background/pattern-8.png') }})"></div>
-        <div class="auto-container">
-            <div class="row clearfix">
-
-                <!-- Skill Column -->
-                <div class="skill-column col-lg-7 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <!-- Sec Title -->
-                        <div class="sec-title">
-                            <div class="title">Our Status valu</div>
-                            <h2>Differentiate your classroom <br> What makes us special?</h2>
-                            <div class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</div>
-                        </div>
-
-                        <!-- Skills -->
-                        <div class="skills">
-
-                            <!-- Skill Item -->
-                            <div class="skill-item">
-                                <div class="skill-header clearfix">
-                                    <div class="skill-title">Joyful</div>
-                                    <div class="skill-percentage">
-                                        <div class="count-box">
-                                            <span class="count-text" data-speed="2000" data-stop="90">0</span>%
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="bar-inner"><div class="bar progress-line" data-width="90"></div></div>
-                                </div>
-                            </div>
-
-                            <!-- Skill Item -->
-                            <div class="skill-item">
-                                <div class="skill-header clearfix">
-                                    <div class="skill-title">Case Study success </div>
-                                    <div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="2000" data-stop="95">0</span>%</div></div>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="bar-inner"><div class="bar progress-line" data-width="95"></div></div>
-                                </div>
-                            </div>
-
-                            <!-- Skill Item -->
-                            <div class="skill-item">
-                                <div class="skill-header clearfix">
-                                    <div class="skill-title">Engaging</div>
-                                    <div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="2000" data-stop="75">0</span>%</div></div>
-                                </div>
-                                <div class="skill-bar">
-                                    <div class="bar-inner"><div class="bar progress-line" data-width="75"></div></div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Image Column -->
-                <div class="image-column col-lg-5 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <div class="circle-one"></div>
-                        <div class="circle-two"></div>
-                        <div class="image titlt" data-tilt data-tilt-max="4">
-                            <img src="{{ asset('assets/images/resource/skill.png') }}" alt="" />
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- End Skill Section -->
 
     <!-- Testimonial Section -->
     <section class="testimonial-section">
@@ -572,42 +396,30 @@
                 <div class="icon-layer-three" style="background-image:url({{ asset('assets/images/icons/icon-2.png') }})"></div>
                 <div class="row clearfix">
 
-                    <!-- News Block -->
-                    <div class="news-block col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="image">
-                                <a href="#"><img src="{{ asset('assets/images/resource/news-1.jpg') }}" alt="" /></a>
-                            </div>
-                            <div class="lower-content">
-                                <div class="border-layer"></div>
-                                <ul class="post-info">
-                                    <li>Technology</li>
-                                    <li>Updated  Sep 26, 2020</li>
-                                </ul>
-                                <h4><a href="#">All The Security & Privacy <br> Updates From Amazon’s</a></h4>
-                                <a href="#" class="more">More <span class="fa fa-angle-double-right"></span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- News Block -->
-                    <div class="news-block col-lg-6 col-md-6 col-sm-12">
-                        <div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="image">
-                                <a href="#"><img src="{{ asset('assets/images/resource/news-2.jpg') }}" alt="" /></a>
-                            </div>
-                            <div class="lower-content">
-                                <div class="border-layer"></div>
-                                <ul class="post-info">
-                                    <li>Education</li>
-                                    <li>Updated  Sep 26, 2020</li>
-                                </ul>
-                                <h4><a href="#">All The Security & Privacy Updates From Amazon’s</a></h4>
-                                <a href="#" class="more">More <span class="fa fa-angle-double-right"></span></a>
+                    @foreach($blogs as $blog)
+                        <div class="news-block col-lg-6 col-md-6 col-sm-12" wire:key="{{ $blog->id }}">
+                            <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <div class="image">
+                                    <a href="@if($blog == 'tr') {{ '/blog/'.$blog->slug }} @else {{ '/blog/'.$blog->{'slug_' . $locale} }} @endif">
+                                        <img src="{{ url('storage', $blog->image) }}" alt="" />
+                                    </a>
+                                </div>
+                                <div class="lower-content">
+                                    <div class="border-layer"></div>
+                                    <ul class="post-info">
+                                        <li>@if($locale == 'tr') {{ $blog->blogCategory->name }} @else {{ $blog->blogCategory->{'name_' . $locale} }} @endif</li>
+                                        <li>Updated  {{ $blog->created_at }}</li>
+                                    </ul>
+                                    <h4>
+                                        <a href="@if($blog == 'tr') {{ '/blog/'.$blog->slug }} @else {{ '/blog/'.$blog->{'slug_' . $locale} }} @endif">
+                                            @if($locale == 'tr') {{ $blog->title }} @else {{ $blog->{ 'title_'.$locale } }} @endif
+                                        </a>
+                                    </h4>
+                                    <a href="@if($blog == 'tr') {{ '/blog/'.$blog->slug }} @else {{ '/blog/'.$blog->{'slug_' . $locale} }} @endif" class="more">More <span class="fa fa-angle-double-right"></span></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
+                    @endforeach
                 </div>
             </div>
         </div>

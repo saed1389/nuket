@@ -15,7 +15,7 @@ class OrderState extends BaseWidget
             Stat::make('New Orders', Order::query()->where('status', 'pending')->count()),
             Stat::make('Order Completed', Order::query()->where('status', 'completed')->count()),
             Stat::make('Order Cancelled', Order::query()->where('status', 'cancelled')->count()),
-            Stat::make('Average Price', Number::currency(Order::query()->avg('grand_total'), 'TRY')),
+            Stat::make('Average Price', Number::currency(Order::query()->avg('grand_total') > 0, 'EUR')),
         ];
     }
 }
