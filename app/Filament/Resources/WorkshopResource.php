@@ -86,6 +86,7 @@ class WorkshopResource extends Resource
                     ->imageEditorViewportWidth('870')
                     ->imageEditorViewportHeight('580')
                     ->required()
+                    ->imageEditor()
                     ->directory('workshop')
                     ->image(),
                 Forms\Components\TextInput::make('support_video')

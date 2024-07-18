@@ -16,4 +16,11 @@ return [
     'videos' => 'Videolar',
     'blog' => 'Blog',
     'contact' => 'İletişim',
+    'online courses' => 'Kurslar',
+    'Contact Info' => 'İletişim bilgileri',
+    'Latest articles & news' => 'En son makaleler ve haberler',
+    'More' => 'Devamı',
+    'Recent Post' => 'Son Gönderiler',
+    'Post At' => 'Gönderim',
+    'Updated' => 'Güncellenmiş',
 ];

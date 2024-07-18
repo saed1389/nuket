@@ -7,9 +7,8 @@
         <div class="pattern-layer-three" style="background-image: url({{ asset('assets/images/icons/icon-4.png') }})"></div>
         <div class="pattern-layer-four" style="background-image: url({{ asset('assets/images/icons/icon-8.png') }})"></div>
         <div class="auto-container">
-            <!-- Page Breadcrumb -->
             <ul class="page-breadcrumb">
-                <li><a href="/">Home</a></li>
+                <li><a href="/">{{ __('homePage.home') }}</a></li>
                 <li><a href="/blog">{{ __('homePage.blog') }}</a></li>
                 <li>@if($lang == 'tr') {{ $blog->title }} @else {{ $blog->{ 'title_'.$lang } }} @endif</li>
             </ul>
@@ -22,12 +21,11 @@
                             <div class="author-image">
                                 <img src="{{ asset('assets/images/resource/parent-2.png') }}" alt="@if($lang == 'tr') {{ $blog->blogCategory->name }} @else {{ $blog->blogCategory->{'name_' . $lang} }} @endif" />
                             </div>
-                            <strong>Post At</strong>
+                            <strong>{{ __('homePage.Post At') }}</strong>
                             {{ $blog->created_at->diffForHumans() }}
                         </div>
                     </div>
                     <div class="pull-right">
-                        <!-- Social Box -->
                         <ul class="social-box">
                             <span class="fa fa-share-alt"></span>
                             <li class="twitter"><a target="_blank" href="http://twitter.com/" class="fa fa-twitter"></a></li>
@@ -40,11 +38,9 @@
             </div>
         </div>
     </section>
-
     <div class="sidebar-page-container style-two">
         <div class="auto-container">
             <div class="row clearfix">
-
                 <div class="content-side col-lg-9 col-md-12 col-sm-12">
                     <div class="blog-detail">
                         <div class="inner-box">
@@ -60,7 +56,7 @@
                                     @if($lang == 'tr') {!! $blog->description !!} @else {!! $blog->{'description_'. $lang} !!} @endif
                                 </p>
                             </div>
-                            <div class="comment-form">
+                            {{--<div class="comment-form">
                                 <div class="group-title"><h4>Leave A Comment</h4></div>
                                 <form method="post" action="">
                                     <div class="form-group">
@@ -79,7 +75,7 @@
                                         <button class="theme-btn btn-style-one" type="submit" name="submit-form"><span class="txt">Post comment</span></button>
                                     </div>
                                 </form>
-                            </div>
+                            </div>--}}
                         </div>
                     </div>
                 </div>
@@ -87,7 +83,7 @@
                     <aside class="sidebar sticky-top">
                         <div class="sidebar-widget popular-posts">
                             <div class="sidebar-title">
-                                <h4>Recent Post</h4>
+                                <h4>{{ __('homePage.Recent Post') }}</h4>
                             </div>
                             @foreach($relatedBlogs as $item)
                                 <div class="widget-content">

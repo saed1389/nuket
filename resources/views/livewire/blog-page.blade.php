@@ -29,7 +29,7 @@
                                 <div class="border-layer"></div>
                                 <ul class="post-info">
                                     <li>@if($lang == 'tr') {{ $blog->blogCategory->name }} @else {{ $blog->blogCategory->{'name_' . $lang} }} @endif</li>
-                                    <li>Updated  {{ $blog->created_at->diffForHumans() }}</li>
+                                    <li>{{ __('homePage.Updated') }}  {{ $blog->created_at->diffForHumans() }}</li>
                                 </ul>
                                 <h4>
                                     <a href="@if($blog == 'tr') {{ '/blog/'.$blog->slug }} @else {{ '/blog/'.$blog->{'slug_' . $lang} }} @endif">

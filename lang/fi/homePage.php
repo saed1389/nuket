@@ -16,4 +16,11 @@ return [
     'videos' => 'Videot',
     'blog' => 'Blogi',
     'contact' => 'Ottaa yhteyttä',
+    'online courses' => 'verkkokursseja',
+    'Contact Info' => 'Yhteystiedot',
+    'Latest articles & news' => 'Uusimmat artikkelit ja uutiset',
+    'More' => 'Lisää',
+    'Recent Post' => 'Uusimmat viestit',
+    'Post At' => 'Postitus klo',
+    'Updated' => 'Päivitetty',
 ];

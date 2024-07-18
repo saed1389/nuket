@@ -19,5 +19,8 @@ return [
     'online courses' => 'Online Courses',
     'Contact Info' => 'Contact Info',
     'Latest articles & news' => 'Latest articles & news',
-    'More' => 'More'
+    'More' => 'More',
+    'Recent Post' => 'Recent Post',
+    'Post At' => 'Post At',
+    'Updated' => 'Updated',
 ];
