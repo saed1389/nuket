@@ -23,4 +23,6 @@ return [
     'Recent Post' => 'Son Gönderiler',
     'Post At' => 'Gönderim',
     'Updated' => 'Güncellenmiş',
+    'image gallery' => 'Resim Galerisi',
+    'video gallery' => 'Video Galerisi',
 ];

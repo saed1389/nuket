@@ -40,8 +40,8 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li><a href="/" class="{{ request()->is('/') ? 'text-success' : '' }}">{{ __('homePage.home') }}</a></li>
-                                <li class="dropdown"><a wire:navigate href="#">{{ __('homePage.About us') }}</a>
+                                <li><a wire:navigate href="/" class="{{ request()->is('/') ? 'text-success' : '' }}">{{ __('homePage.home') }}</a></li>
+                                <li class="dropdown"><a href="#">{{ __('homePage.About us') }}</a>
                                     <ul>
                                         <li><a wire:navigate href="">{{ __('homePage.About us') }}</a></li>
                                         <li><a wire:navigate href="">{{ __('homePage.Solution partners') }}</a></li>
@@ -56,21 +56,19 @@
                                     </ul>
                                 </li>
                                 <li><a wire:navigate href="">{{ __('homePage.workshops') }}</a></li>
-                                <li class="dropdown"><a href="#">{{ __('homePage.gallery') }}</a>
+                                <li class="dropdown"><a class="{{ request()->segment('1') == 'gallery' ? 'text-success' : '' }}" href="#">{{ __('homePage.gallery') }}</a>
                                     <ul>
-                                        <li><a wire:navigate href="">{{ __('homePage.images') }}</a></li>
-                                        <li><a wire:navigate href="">{{ __('homePage.videos') }}</a></li>
+                                        <li><a wire:navigate href="/gallery/images">{{ __('homePage.images') }}</a></li>
+                                        <li><a wire:navigate href="/gallery/videos">{{ __('homePage.videos') }}</a></li>
                                     </ul>
                                 </li>
-                                <li><a wire:navigate href="/blog">{{ __('homePage.blog') }}</a></li>
-                                <li><a wire:navigate href="/contact">{{ __('homePage.contact') }}</a></li>
+                                <li><a wire:navigate href="/blog" class="{{ request()->segment(1) == 'blog' ? 'text-success' : '' }}" >{{ __('homePage.blog') }}</a></li>
+                                <li><a wire:navigate href="/contact" class="{{ request()->segment(1) == 'contact' ? 'text-success' : '' }}" >{{ __('homePage.contact') }}</a></li>
                             </ul>
                         </div>
                     </nav>
 
-
                     <div class="outer-box clearfix">
-
                         <div class="search-box">
                             <form method="post" action="">
                                 <div class="form-group">

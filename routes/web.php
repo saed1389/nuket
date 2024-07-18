@@ -14,9 +14,11 @@ use App\Livewire\CheckoutPage;
 use App\Livewire\CourseDetailPage;
 use App\Livewire\CoursesPage;
 use App\Livewire\HomePage;
+use App\Livewire\ImagePage;
 use App\Livewire\MyOrderDetailPage;
 use App\Livewire\MyOrdersPage;
 use App\Livewire\SuccessPage;
+use App\Livewire\VideoPage;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/lang',[LanguageController::class , 'change'])->name('user.lang');
@@ -32,6 +34,11 @@ Route::prefix('courses')->group(function () {
 Route::prefix('blog')->group(function () {
     Route::get('', BlogPage::class);
     Route::get('/{slug}', BlogDetailPage::class);
+});
+
+Route::prefix('gallery')->group(function () {
+   Route::get('/images', ImagePage::class);
+   Route::get('/videos', VideoPage::class);
 });
 
 Route::get('/cart', CartPage::class);

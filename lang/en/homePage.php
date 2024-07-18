@@ -23,4 +23,6 @@ return [
     'Recent Post' => 'Recent Post',
     'Post At' => 'Post At',
     'Updated' => 'Updated',
+    'image gallery' => 'Image Gallery',
+    'video gallery' => 'Video Gallery',
 ];

@@ -23,4 +23,6 @@ return [
     'Recent Post' => 'Uusimmat viestit',
     'Post At' => 'Postitus klo',
     'Updated' => 'Päivitetty',
+    'image gallery' => 'Kuvagalleria',
+    'video gallery' => 'Videogalleria',
 ];
