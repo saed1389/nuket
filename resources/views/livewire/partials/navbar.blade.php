@@ -21,16 +21,11 @@
                                     <div class="mega-menu">
                                         <div class="upper-box">
                                             <div class="page-links-box">
-                                                @php
-                                                    $locale = app()->getLocale();
-                                                    $categories = \App\Models\Category::where('status', 1)->get()
-                                                @endphp
                                                 @foreach($categories as $category)
                                                     <a href="@if($locale == 'tr') {{ $category->slug }} @else {{ $category->{'slug_' . $locale} }} @endif" class="link" wire:key="{{ $category->id }}">
                                                         @if($locale == 'tr') {{ $category->name }} @else {{ $category->{'name_' . $locale} }} @endif
                                                     </a>
                                                 @endforeach
-
                                             </div>
                                         </div>
                                         <div class="lower-box">
@@ -67,8 +62,8 @@
                                         <li><a wire:navigate href="">{{ __('homePage.videos') }}</a></li>
                                     </ul>
                                 </li>
-                                <li><a wire:navigate href="">{{ __('homePage.blog') }}</a></li>
-                                <li><a wire:navigate href="">{{ __('homePage.contact') }}</a></li>
+                                <li><a wire:navigate href="/blog">{{ __('homePage.blog') }}</a></li>
+                                <li><a wire:navigate href="/contact">{{ __('homePage.contact') }}</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -198,12 +193,12 @@
                                 <a href="/"><img src="{{ asset('assets/images/logo.png') }}" alt="" /></a>
                             </div>
                             <div class="content-box">
-                                <h2>About Us</h2>
+                                <h2>{{ __('homePage.About us') }}</h2>
                                 <p class="text">The argument in favor of using filler text goes something like this: If you use real content in the Consulting Process, anytime you reach a review point you’ll end up reviewing and negotiating the content itself and not the design.</p>
                                 <a href="#" class="theme-btn btn-style-two"><span class="txt">Consultation</span></a>
                             </div>
                             <div class="contact-info">
-                                <h2>Contact Info</h2>
+                                <h2>{{ __('homePage.Contact Info') }}</h2>
                                 <ul class="list-style-two">
                                     <li><span class="icon fa fa-location-arrow"></span>Chicago 12, Melborne City, USA</li>
                                     <li><span class="icon fa fa-phone"></span>(111) 111-111-1111</li>
@@ -221,7 +216,6 @@
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

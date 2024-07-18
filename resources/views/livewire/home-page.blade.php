@@ -395,27 +395,28 @@
                 <div class="icon-layer-two" style="background-image:url({{ asset('assets/images/icons/icon-2.png') }})"></div>
                 <div class="icon-layer-three" style="background-image:url({{ asset('assets/images/icons/icon-2.png') }})"></div>
                 <div class="row clearfix">
-
                     @foreach($blogs as $blog)
                         <div class="news-block col-lg-6 col-md-6 col-sm-12" wire:key="{{ $blog->id }}">
                             <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                                 <div class="image">
-                                    <a href="@if($blog == 'tr') {{ '/blog/'.$blog->slug }} @else {{ '/blog/'.$blog->{'slug_' . $locale} }} @endif">
-                                        <img src="{{ url('storage', $blog->image) }}" alt="" />
+                                    <a href="@if($locale == 'tr') {{ '/blog/'.$blog->slug }} @else {{ '/blog/'.$blog->{'slug_' . $locale} }} @endif">
+                                        <img src="{{ url('storage', $blog->image) }}" alt="@if($locale == 'tr') {{ $blog->title }} @else {{ $blog->{ 'title_'.$locale } }} @endif" />
                                     </a>
                                 </div>
                                 <div class="lower-content">
                                     <div class="border-layer"></div>
                                     <ul class="post-info">
                                         <li>@if($locale == 'tr') {{ $blog->blogCategory->name }} @else {{ $blog->blogCategory->{'name_' . $locale} }} @endif</li>
-                                        <li>Updated  {{ $blog->created_at }}</li>
+                                        <li>Updated  {{ $blog->created_at->diffForHumans() }}</li>
                                     </ul>
                                     <h4>
-                                        <a href="@if($blog == 'tr') {{ '/blog/'.$blog->slug }} @else {{ '/blog/'.$blog->{'slug_' . $locale} }} @endif">
+                                        <a href="@if($locale == 'tr') {{ '/blog/'.$blog->slug }} @else {{ '/blog/'.$blog->{'slug_' . $locale} }} @endif">
                                             @if($locale == 'tr') {{ $blog->title }} @else {{ $blog->{ 'title_'.$locale } }} @endif
                                         </a>
                                     </h4>
-                                    <a href="@if($blog == 'tr') {{ '/blog/'.$blog->slug }} @else {{ '/blog/'.$blog->{'slug_' . $locale} }} @endif" class="more">More <span class="fa fa-angle-double-right"></span></a>
+                                    <a href="@if($locale == 'tr') {{ '/blog/'.$blog->slug }} @else {{ '/blog/'.$blog->{'slug_' . $locale} }} @endif" class="more">
+                                        {{ __('homePage.More') }}<span class="fa fa-angle-double-right"></span>
+                                    </a>
                                 </div>
                             </div>
                         </div>

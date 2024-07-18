@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -22,6 +21,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $app = App::getLocale();
-        view()->share(compact('app'));
+        $locale = app()->getLocale();
+
+        view()->share(compact('app', 'locale'));
     }
 }

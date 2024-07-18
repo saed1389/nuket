@@ -29,9 +29,9 @@ Route::prefix('courses')->group(function () {
     Route::get('/courses/{course}', CourseDetailPage::class);
 });
 
-Route::prefix('blogs')->group(function () {
-    Route::get('/blog', BlogPage::class);
-    Route::get('/blog/{blog}', BlogDetailPage::class);
+Route::prefix('blog')->group(function () {
+    Route::get('', BlogPage::class);
+    Route::get('/{slug}', BlogDetailPage::class);
 });
 
 Route::get('/cart', CartPage::class);

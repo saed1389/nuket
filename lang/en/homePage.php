@@ -16,4 +16,8 @@ return [
     'videos' => 'Videos',
     'blog' => 'Blog',
     'contact' => 'Contact',
+    'online courses' => 'Online Courses',
+    'Contact Info' => 'Contact Info',
+    'Latest articles & news' => 'Latest articles & news',
+    'More' => 'More'
 ];
