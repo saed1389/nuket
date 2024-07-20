@@ -19,6 +19,8 @@ use App\Livewire\MyOrderDetailPage;
 use App\Livewire\MyOrdersPage;
 use App\Livewire\SuccessPage;
 use App\Livewire\VideoPage;
+use App\Livewire\WorkshopDetailPage;
+use App\Livewire\WorkshopPage;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/lang',[LanguageController::class , 'change'])->name('user.lang');
@@ -39,6 +41,11 @@ Route::prefix('blog')->group(function () {
 Route::prefix('gallery')->group(function () {
    Route::get('/images', ImagePage::class);
    Route::get('/videos', VideoPage::class);
+});
+
+Route::prefix('workshop')->group(function () {
+    Route::get('/', WorkshopPage::class);
+    Route::get('/{slug}', WorkshopDetailPage::class);
 });
 
 Route::get('/cart', CartPage::class);

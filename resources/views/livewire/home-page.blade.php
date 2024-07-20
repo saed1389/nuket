@@ -1,19 +1,12 @@
 <div>
     <div class="preloader"></div>
-
-    <!-- Main Header-->
     @livewire('partials.navbar')
-    <!-- End Main Header -->
-
-    <!-- Banner Section -->
     <section class="banner-section">
         <div class="auto-container">
             <div class="pattern-layer-six" style="background-image: url({{ asset('assets/images/main-slider/pattern-4.png') }})"></div>
             <div class="pattern-layer-seven" style="background-image: url({{ asset('assets/images/main-slider/pattern-5.png') }})"></div>
             <div class="pattern-layer-eight" style="background-image: url({{ asset('assets/images/main-slider/icon-2.png') }})"></div>
             <div class="row clearfix">
-
-                <!-- Image Column -->
                 <div class="image-column col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-column">
                         <div class="pattern-layer-one" style="background-image: url({{ asset('assets/images/main-slider/pattern-1.png') }})"></div>
@@ -32,90 +25,68 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Content Column -->
                 <div class="content-column col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-column">
                         <div class="title">Learn the latest skills</div>
-                        <h1>Build skills with <br> courses flexible online <br> courses</h1>
+                        <h1>Turn obstacles into opportunities and discover what you can do!</h1>
                         <div class="btns-box">
-                            <a href="about.html" class="theme-btn btn-style-one"><span class="txt">Join For free</span></a>
+                            <a href="/contact" class="theme-btn btn-style-one"><span class="txt">Contact us</span></a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-    <!-- End Banner Section -->
-
-    <!-- Instructor Section -->
     <section class="instructor-section">
         <div class="background-layer" style="background-image:url({{ asset('assets/images/background/1.png') }})"></div>
         <div class="background-layer-one" style="background-image:url({{ asset('assets/images/background/pattern-1.png') }})"></div>
         <div class="background-layer-two" style="background-image:url({{ asset('assets/images/background/pattern-2.png') }})"></div>
         <div class="auto-container">
             <div class="row clearfix">
-
-                <!-- Blocks Column -->
                 <div class="blocks-column col-lg-8 col-md-12 col-sm-12">
                     <div class="inner-column">
                         <div class="row clearfix">
-
-                            <!-- Service Block -->
                             <div class="service-block col-lg-6 col-md-6 col-sm-12">
                                 <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                                     <div class="border-layer"></div>
                                     <div class="icon-box">
                                         <div class="icon flaticon-verify"></div>
                                     </div>
-                                    <h4><a href="course-detail.html">Trusted content</a></h4>
-                                    <div class="text">Online learning is as easy and natural as chatting with a group of friends.</div>
+                                    <h4><a href="course-detail.html">Training</a></h4>
+                                    <div class="text">Olektia offers ICF-approved basic coaching training for deaf and those working with them..</div>
                                 </div>
                             </div>
-
-                            <!-- Service Block -->
                             <div class="service-block col-lg-6 col-md-6 col-sm-12">
                                 <div class="inner-box wow fadeInLeft" data-wow-delay="150ms" data-wow-duration="1500ms">
                                     <div class="border-layer"></div>
                                     <div class="icon-box">
                                         <div class="icon flaticon-heart-box"></div>
                                     </div>
-                                    <h4><a href="course-detail.html">Flexible courses</a></h4>
-                                    <div class="text">We provide online learning solutions for secondary education, from structured content to courses fully taught </div>
+                                    <h4><a href="course-detail.html">Coaching</a></h4>
+                                    <div class="text">Individuals who are deaf, those who can hear, and everyone communicating with deaf can participate.. </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-
-                <!-- Instructor Column -->
                 <div class="instructor-column col-lg-4 col-md-12 col-sm-12">
                     <div class="inner-column wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <h4>Become an instructor</h4>
-                        <p>Top instructors from around the world teach millions of students  Duis aute irure dolor in reprehenderit in </p>
-                        <p>voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+                        <h4>Become a Trainer</h4>
+                        <p>If you are interested in working with us as a trainer in coaching, sign language, and vocational training for deaf, please contact us using the details below! </p>
                         <a class="click-here" href="membership.html">Click here for apply</a>
                         <div class="image titlt" data-tilt data-tilt-max="4">
                             <img src="{{ asset('assets/images/resource/instructor.png') }}" alt="" />
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-    <!-- End Instructor Section -->
-
-    <!-- Benefit Section -->
     <section class="benefit-section">
         <div class="background-layer-one" style="background-image:url({{ asset('assets/images/background/pattern-5.png') }})"></div>
         <div class="background-layer-two" style="background-image:url({{ asset('assets/images/background/pattern-6.png') }})"></div>
         <div class="auto-container">
             <div class="row clearfix">
-
-                <!-- Images Column -->
                 <div class="images-column col-lg-7 col-md-12 col-sm-12">
                     <div class="inner-column">
                         <div class="pattern-layer" style="background-image:url({{ asset('assets/images/background/pattern-3.png') }})"></div>
@@ -132,52 +103,47 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Content Column -->
                 <div class="content-column col-lg-5 col-md-12 col-sm-12">
                     <div class="inner-column">
                         <div class="sec-title">
                             <div class="title">Learn anything</div>
-                            <h2>Benefit from our <br> online learning expertise <br> Earn professional </h2>
+                            <h2>Olektia was founded by experts in sign language and coaching applications </h2>
                         </div>
                         <ul class="list-style-one">
-                            <li><span class="icon flaticon-double-check"></span><strong>Online degrees</strong>Vendors, suppliers and companies with online access to your technology can be your weakest link</li>
-                            <li><span class="icon flaticon-double-check"></span><strong>Short courses</strong>Vendors, suppliers and companies with online access to your technology can be your weakest link</li>
-                            <li><span class="icon flaticon-double-check"></span><strong>Learn with experts</strong>Vendors, suppliers and companies with online access to your technology can be your weakest link</li>
+                            <li><span class="icon flaticon-double-check"></span><strong>{{ __('homePage.About us') }}</strong>We are a team committed to bringing together hearing and deaf to help them discover themselves and gain professions! </li>
+                            <li><span class="icon flaticon-double-check"></span><strong>{{ __('homePage.Solution partners') }}</strong>Valuable solution partners who do not withhold their knowledge and experience in various fields are the most significant source of strength for Olektia.</li>
+                            <li><span class="icon flaticon-double-check"></span><strong>{{ __('homePage.projects') }}</strong>Imagining and doing is the job of the Olektia team. Olektia continues to progress with projects nourished by unique ideas, having signed many local and international projects.</li>
                         </ul>
                         <div class="btn-box">
-                            <a href="about.html" class="theme-btn btn-style-two"><span class="txt">Join For free</span></a>
+                            <a href="about.html" class="theme-btn btn-style-two"><span class="txt">Read More</span></a>
                         </div>
                     </div>
                 </div>
-
             </div>
-
-            <!-- Lower Text -->
             <div class="lower-text">
-                <p>Lebari is built for people like you. With useful features, your dream and idea can <br> become a reality. Lebari helps you to achieve big things!</p>
+                <p>We share our thoughts, feelings, and experiences with you in this section!</p>
             </div>
-
         </div>
     </section>
-    <!-- End Benefit Section -->
-
-    <!-- Feature Section -->
     <section class="feature-section">
         <div class="pattern-layer" style="background-image:url({{ asset('assets/images/background/pattern-7.png') }})"></div>
         <div class="auto-container">
             <div class="row clearfix">
-
-                <!-- Content Column -->
                 <div class="content-column col-lg-7 col-md-12 col-sm-12">
                     <div class="inner-column">
                         <div class="sec-title">
-                            <div class="title">Explore featured courses</div>
-                            <h2>Fundamentals of Digital <br> Health in Hospitals National <br> University</h2>
-                            <div class="text">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod but laboris incididunt ut labore et dolore magna <br> aliqua.sed do eiusmod but laboris incididunt ut labore et dolore magna aliqua.</div>
+                            <div class="title">ENROLLMENT IN TRAININGS</div>
+                            <h2>For deaf individuals, all information about training and coaching activities is here!</h2>
+                            <div class="text">To register for trainings, you can contact us using the details below between Monday-Friday from 10:00 AM to 5:00 PM.
+                                <br>
+                                Phone Number: +358 415 775 343
+                                <br>
+                                Phone Number: +358 415 775 344
+
+                            </div>
                         </div>
                         <div class="btn-box">
-                            <a href="about.html" class="theme-btn btn-style-two"><span class="txt">Short courses</span></a>
+                            <a href="/courses" class="theme-btn btn-style-two"><span class="txt">Short courses</span></a>
                         </div>
                     </div>
                 </div>
@@ -190,10 +156,11 @@
                             <img src="{{ asset('assets/images/resource/feature.jpg') }}" alt="" />
                             <div class="overlay-box">
                                 <div class="content">
-                                    <h2>How a degree on <br> FutureLearn <br> works</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod but laboris incididunt ut labore et dolore magna </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
-                                    <a href="#" class="learn">Learn 3 Class</a>
+                                    <h2>LIVE SUPPORT SECTION</h2>
+                                    <p>
+                                        Deaf can receive live assistance through video calls on WhatsApp for more detailed information about trainings and coaching sessions, Monday-Friday from 10:00 AM to 5:00 PM.
+                                    </p>
+                                    <p>Sign Language Live Help <br>  WhatsApp no: +358 415 775 345</p>
                                 </div>
                             </div>
                         </div>
@@ -202,14 +169,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section>
-    <!-- End Benefit Section -->
-
-    <!-- Courses Section -->
     <section class="courses-section">
         <div class="pattern-layer" style="background-image:url({{ asset('assets/images/background/pattern-2.png') }})"></div>
         <div class="circle-one paroller" data-paroller-factor="-0.20" data-paroller-factor-lg="0.20" data-paroller-type="foreground" data-paroller-direction="horizontal"></div>
@@ -217,7 +179,7 @@
         <div class="auto-container">
             <div class="sec-title centered">
                 <h2>You can learn anything, Explore <br> featured courses</h2>
-                <div class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat <br> nulla pariatur Duis aute irure dolor in reprehenderit in</div>
+                <div class="text">Conceptual foundations of coaching: The coaching model and practices offered by Olektia, including in-depth examples of coaching tools to be used in coaching sessions, facilitate entry into the Professional Coaching field.</div>
             </div>
             <div class="row clearfix">
 
@@ -254,9 +216,6 @@
             </div>
         </div>
     </section>
-    <!-- End Courses Section -->
-
-    <!-- Testimonial Section -->
     <section class="testimonial-section">
         <div class="circle-one paroller" data-paroller-factor="-0.20" data-paroller-factor-lg="0.20" data-paroller-type="foreground" data-paroller-direction="horizontal"></div>
         <div class="circle-two paroller" data-paroller-factor="0.20" data-paroller-factor-lg="-0.20" data-paroller-type="foreground" data-paroller-direction="horizontal"></div>
@@ -264,15 +223,12 @@
         <div class="auto-container">
             <div class="inner-container">
                 <div class="pattern-layer" style="background-image:url({{ asset('assets/images/background/pattern-9.png') }})"></div>
-                <!-- Sec Title -->
                 <div class="sec-title centered">
-                    <div class="title">Testimonial</div>
-                    <h2>Words From Customers</h2>
-                    <div class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <br> fugiat nulla pariatur Duis aute irure dolor in reprehenderit in</div>
+                    <div class="title">Trainers</div>
+                    <h2>Olektia Trainers</h2>
+                    <div class="text">Olektia continues its activities with a team of expert and experienced trainers who are well-versed in Deaf culture.</div>
                 </div>
                 <div class="testimonial-carousel owl-carousel owl-theme">
-
-                    <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="inner-box">
                             <div class="text">We turn your experts into thought leaders by getting their voices heard in the market and by building credibility and brand advocates amongst industry influencers from the media, analyst community</div>
@@ -288,8 +244,6 @@
                             <div class="quote-icon flaticon-quote-2"></div>
                         </div>
                     </div>
-
-                    <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="inner-box">
                             <div class="text">We turn your experts into thought leaders by getting their voices heard in the market and by building credibility and brand advocates amongst industry influencers from the media, analyst community</div>
@@ -305,8 +259,6 @@
                             <div class="quote-icon flaticon-quote-2"></div>
                         </div>
                     </div>
-
-                    <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="inner-box">
                             <div class="text">We turn your experts into thought leaders by getting their voices heard in the market and by building credibility and brand advocates amongst industry influencers from the media, analyst community</div>
@@ -322,8 +274,6 @@
                             <div class="quote-icon flaticon-quote-2"></div>
                         </div>
                     </div>
-
-                    <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="inner-box">
                             <div class="text">We turn your experts into thought leaders by getting their voices heard in the market and by building credibility and brand advocates amongst industry influencers from the media, analyst community</div>
@@ -339,8 +289,6 @@
                             <div class="quote-icon flaticon-quote-2"></div>
                         </div>
                     </div>
-
-                    <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="inner-box">
                             <div class="text">We turn your experts into thought leaders by getting their voices heard in the market and by building credibility and brand advocates amongst industry influencers from the media, analyst community</div>
@@ -356,8 +304,6 @@
                             <div class="quote-icon flaticon-quote-2"></div>
                         </div>
                     </div>
-
-                    <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="inner-box">
                             <div class="text">We turn your experts into thought leaders by getting their voices heard in the market and by building credibility and brand advocates amongst industry influencers from the media, analyst community</div>
@@ -378,17 +324,13 @@
             </div>
         </div>
     </section>
-    <!-- End Testimonial Section -->
-
-    <!-- News Section -->
     <section class="news-section">
         <div class="pattern-layer" style="background-image:url({{ asset('assets/images/background/pattern-11.png') }})"></div>
         <div class="auto-container">
-            <!-- Sec Title -->
             <div class="sec-title centered">
                 <div class="title">Our Blogs</div>
                 <h2>Latest articles & news</h2>
-                <div class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <br> fugiat nulla pariatur Duis aute irure dolor in reprehenderit in</div>
+                <div class="text">We share our thoughts, feelings, and experiences with you in this section!</div>
             </div>
             <div class="inner-container">
                 <div class="icon-layer-one" style="background-image:url({{ asset('assets/images/icons/icon-1.png') }})"></div>
@@ -425,19 +367,13 @@
             </div>
         </div>
     </section>
-    <!-- End News Section -->
-
-    <!-- Clients Section -->
     <section class="clients-section">
         <div class="auto-container">
-            <!-- Sec Title -->
-            <div class="sec-title centered">
+            {{--<div class="sec-title centered">
                 <h2>Key supporters</h2>
                 <div class="text">These leading universities are currently offering online degree <br> courses on FutureLearn:</div>
-            </div>
-
+            </div>--}}
             <div class="sponsors-outer">
-                <!--Sponsors Carousel-->
                 <ul class="sponsors-carousel owl-carousel owl-theme">
                     <li class="slide-item"><figure class="image-box"><a href="#"><img src="{{ asset('assets/images/clients/1.png') }}" alt=""></a></figure></li>
                     <li class="slide-item"><figure class="image-box"><a href="#"><img src="{{ asset('assets/images/clients/2.png') }}" alt=""></a></figure></li>
@@ -452,8 +388,5 @@
 
         </div>
     </section>
-    <!-- End Clients Section -->
     @livewire('partials.footer')
-    <!-- Main Footer -->
-
 </div>

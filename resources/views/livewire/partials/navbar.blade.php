@@ -55,7 +55,7 @@
                                         <li><a wire:navigate href="">{{ __('homePage.education') }}</a></li>
                                     </ul>
                                 </li>
-                                <li><a wire:navigate href="">{{ __('homePage.workshops') }}</a></li>
+                                <li><a wire:navigate href="/workshop" class="{{ request()->segment('1') == 'workshop' ? 'text-success' : '' }}">{{ __('homePage.workshops') }}</a></li>
                                 <li class="dropdown"><a class="{{ request()->segment('1') == 'gallery' ? 'text-success' : '' }}" href="#">{{ __('homePage.gallery') }}</a>
                                     <ul>
                                         <li><a wire:navigate href="/gallery/images">{{ __('homePage.images') }}</a></li>
