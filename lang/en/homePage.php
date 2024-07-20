@@ -26,4 +26,18 @@ return [
     'image gallery' => 'Image Gallery',
     'video gallery' => 'Video Gallery',
     'Link' => 'Link',
+    'Contact Now' => 'Contact Now',
+    'GET IN TOUCH' => 'GET IN TOUCH',
+    'Leave a message' => 'Leave a message',
+    'name' => 'Name',
+    'email' => 'Email',
+    'phone' => 'Phone',
+    'message' => 'Message',
+    'send' => 'Send Message',
+    'address' => 'Address',
+    'our phones' => 'Our Phones',
+    'our emails' => 'Our Emails',
+    'working hours' => 'Working Hours',
+    'Monday to Friday' => 'Monday to Friday',
+
 ];

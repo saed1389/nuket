@@ -49,7 +49,7 @@
                                     </ul>
                                 </li>
                                 <li><a wire:navigate href="/courses">{{ __('homePage.Courses') }}</a></li>
-                                <li class="dropdown"><a href="#">{{ __('homePage.Services') }}</a>
+                                <li class="dropdown"><a class="{{ request()->segment('1') == 'services' ? 'text-success' : '' }}" href="#">{{ __('homePage.Services') }}</a>
                                     <ul>
                                         <li><a wire:navigate href="/services/coaching">{{ __('homePage.coaching') }}</a></li>
                                         <li><a wire:navigate href="/services/education">{{ __('homePage.education') }}</a></li>

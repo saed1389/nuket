@@ -12,6 +12,7 @@ use App\Livewire\CartPage;
 use App\Livewire\CategoriesPage;
 use App\Livewire\CheckoutPage;
 use App\Livewire\CoachingPage;
+use App\Livewire\ContactPage;
 use App\Livewire\CourseDetailPage;
 use App\Livewire\CoursesPage;
 use App\Livewire\EducationPage;
@@ -56,6 +57,8 @@ Route::prefix('workshop')->group(function () {
     Route::get('/', WorkshopPage::class);
     Route::get('/{slug}', WorkshopDetailPage::class);
 });
+
+Route::get('contact', ContactPage::class);
 
 Route::get('/cart', CartPage::class);
 Route::get('/checkout', CheckoutPage::class);
