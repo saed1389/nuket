@@ -25,4 +25,5 @@ return [
     'Updated' => 'Päivitetty',
     'image gallery' => 'Kuvagalleria',
     'video gallery' => 'Videogalleria',
+    'Link' => 'Linkki',
 ];

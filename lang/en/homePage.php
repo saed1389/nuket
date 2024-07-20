@@ -25,4 +25,5 @@ return [
     'Updated' => 'Updated',
     'image gallery' => 'Image Gallery',
     'video gallery' => 'Video Gallery',
+    'Link' => 'Link',
 ];

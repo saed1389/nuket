@@ -11,12 +11,15 @@ use App\Livewire\CancelPage;
 use App\Livewire\CartPage;
 use App\Livewire\CategoriesPage;
 use App\Livewire\CheckoutPage;
+use App\Livewire\CoachingPage;
 use App\Livewire\CourseDetailPage;
 use App\Livewire\CoursesPage;
+use App\Livewire\EducationPage;
 use App\Livewire\HomePage;
 use App\Livewire\ImagePage;
 use App\Livewire\MyOrderDetailPage;
 use App\Livewire\MyOrdersPage;
+use App\Livewire\ServiceDetailPage;
 use App\Livewire\SuccessPage;
 use App\Livewire\VideoPage;
 use App\Livewire\WorkshopDetailPage;
@@ -28,9 +31,15 @@ Route::get('/lang',[LanguageController::class , 'change'])->name('user.lang');
 Route::get('/', HomePage::class);
 
 Route::prefix('courses')->group(function () {
+    Route::get('/', CoursesPage::class);
     Route::get('/categories', CategoriesPage::class);
-    Route::get('/courses', CoursesPage::class);
     Route::get('/courses/{course}', CourseDetailPage::class);
+});
+
+Route::prefix('services')->group(function () {
+    Route::get('/coaching', CoachingPage::class);
+    Route::get('/education', EducationPage::class);
+    Route::get('/service-detail/{slug}', ServiceDetailPage::class);
 });
 
 Route::prefix('blog')->group(function () {

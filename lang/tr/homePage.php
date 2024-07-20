@@ -25,4 +25,5 @@ return [
     'Updated' => 'Güncellenmiş',
     'image gallery' => 'Resim Galerisi',
     'video gallery' => 'Video Galerisi',
+    'Link' => 'Bağlantı'
 ];
