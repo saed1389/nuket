@@ -31,4 +31,10 @@ class LanguageController extends Controller
 
     }
 
+    public function setCurrency($currency)
+    {
+        \session(['currency' => $currency]);
+        return redirect()->back();
+    }
+
 }

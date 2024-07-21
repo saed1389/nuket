@@ -13,7 +13,7 @@
                 <li>@if($lang == 'tr') {{ $service->title }} @else {{ $service->{ 'title_'.$lang } }} @endif</li>
             </ul>
             <div class="content-box">
-                <h2>@if($lang == 'tr') {{ $service->title }} @else {{ $service->{ 'title_'.$lang } }} @endif</h2>
+                <h2>@if($lang == 'tr') {{ $service->title }} @else {{ $service->{ 'title_'.$lang } }} @endif <a href=""><img src="{{ asset('assets/images/log.png') }}" alt="" style="width: 50px;"></a></h2>
                 <div class="clearfix">
                     <div class="pull-left">
                         <div class="author-info">

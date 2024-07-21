@@ -72,7 +72,7 @@ class ServiceResource extends Resource
                     ->required()
                     ->options([
                         1 => 'Coaching',
-                        2 => 'Education',
+                        2 => 'Interpretation',
                     ]),
                 Forms\Components\MarkdownEditor::make('description')
                     ->label('Description (tr)')

@@ -2604,6 +2604,7 @@ img{
 }
 
 .service-block .inner-box .icon-box{
+    background-color: rgba(146, 241, 193, 0.41);
     position:relative;
     width:75px;
     height:75px;
@@ -2624,8 +2625,8 @@ img{
 }
 
 .service-block .inner-box .icon-box:before{
+
     position:absolute;
-    content:'';
     left:0px;
     top:0px;
     right:0px;
@@ -2920,7 +2921,7 @@ img{
 
 .feature-section .image-column .feature-icon{
     position:absolute;
-    right:-120px;
+    right:-90px;
     top:-90px;
     z-index:2;
 }

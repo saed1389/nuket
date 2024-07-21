@@ -14,7 +14,7 @@
             </ul>
             <div class="content-box">
                 <div class="title">@if($lang == 'tr') {{ $blog->blogCategory->name }} @else {{ $blog->blogCategory->{'name_' . $lang} }} @endif</div>
-                <h2>@if($lang == 'tr') {{ $blog->title }} @else {{ $blog->{ 'title_'.$lang } }} @endif</h2>
+                <h2>@if($lang == 'tr') {{ $blog->title }} @else {{ $blog->{ 'title_'.$lang } }} @endif <a href=""><img src="{{ asset('assets/images/log.png') }}" alt="" style="width: 50px;"></a></h2>
                 <div class="clearfix">
                     <div class="pull-left">
                         <div class="author-info">

@@ -12,7 +12,7 @@
                 <li>{{ __('homePage.images') }}</li>
             </ul>
             <div class="content-box">
-                <h2>{{ __('homePage.image gallery') }}</h2>
+                <h2>{{ __('homePage.image gallery') }} <a href=""><img src="{{ asset('assets/images/log.png') }}" alt="" style="width: 50px;"></a></h2>
                 <div class="text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Duis aute irure dolor in reprehenderit in </div>
             </div>
         </div>

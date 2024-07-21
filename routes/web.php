@@ -30,7 +30,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/lang',[LanguageController::class , 'change'])->name('user.lang');
 
 Route::get('/', HomePage::class);
-
+Route::get('/currency/{currency}', [LanguageController::class, 'setCurrency'])->name('currency.set');
 Route::prefix('courses')->group(function () {
     Route::get('/', CoursesPage::class);
     Route::get('/categories', CategoriesPage::class);
