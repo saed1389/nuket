@@ -43,9 +43,9 @@
                                 <li><a  href="/" class="{{ request()->is('/') ? 'text-success' : '' }}">{{ __('homePage.home') }}</a></li>
                                 <li class="dropdown"><a href="#">{{ __('homePage.About us') }}</a>
                                     <ul>
-                                        <li><a  href="">{{ __('homePage.About us') }}</a></li>
-                                        <li><a  href="">{{ __('homePage.Solution partners') }}</a></li>
-                                        <li><a  href="">{{ __('homePage.projects') }}</a></li>
+                                        <li><a  href="/about">{{ __('homePage.About us') }}</a></li>
+                                        <li><a  href="/about/solution-partner">{{ __('homePage.Solution partners') }}</a></li>
+                                        <li><a  href="/about/projects">{{ __('homePage.projects') }}</a></li>
                                     </ul>
                                 </li>
                                 <li><a  href="/courses">{{ __('homePage.Courses') }}</a></li>
@@ -69,14 +69,14 @@
                     </nav>
 
                     <div class="outer-box clearfix">
-                        <div class="search-box">
+                        {{--<div class="search-box">
                             <form method="post" action="">
                                 <div class="form-group">
                                     <input type="search" name="search-field" value="" placeholder="{{ __('homePage.search') }}" required>
                                     <button type="submit"><span class="icon fa fa-search"></span></button>
                                 </div>
                             </form>
-                        </div>
+                        </div>--}}
                         {{--<li class="nav-item dropdown web-drop">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="{{ asset('assets/front/img').'/'.getCurrentCurrency().'.png' }}" alt=""> {{ strtoupper(getCurrentCurrency()) }}
@@ -192,7 +192,7 @@
             </div>
         </div>
     </div>
-    <script>
+    {{--<script>
         document.getElementById("navbarDropdown2").addEventListener("click", function() {
             var dropdownMenu = document.getElementById("navbarDropdown2-ul");
             if (dropdownMenu.style.display === "block") {
@@ -201,5 +201,5 @@
                 dropdownMenu.style.display = "block";
             }
         });
-    </script>
+    </script>--}}
 </div>

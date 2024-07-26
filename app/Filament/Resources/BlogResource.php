@@ -27,7 +27,6 @@ class BlogResource extends Resource
     {
         return $form
             ->schema([
-
                 Forms\Components\TextInput::make('title')
                     ->label('Title (tr)')
                     ->required()
@@ -105,7 +104,6 @@ class BlogResource extends Resource
 
     public static function table(Table $table): Table
     {
-
         return $table
             ->columns([
                 Tables\Columns\ImageColumn::make('image'),

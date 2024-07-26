@@ -72,5 +72,13 @@ return [
     'Our Blogs' => 'Meidän blogit',
     'home page blog description' => 'Jaamme ajatuksemme, tunteemme ja kokemuksemme kanssasi tässä osiossa!',
     'Interpretation' => 'Tulkinta',
-    'search' => 'Hae'
+    'search' => 'Hae',
+    'We found :count courses available for you' => 'Löysimme sinulle :count kursseja',
+    'Trainer' => 'Kouluttaja',
+    'Training Description' => 'Koulutuksen kuvaus',
+    'level' => 'Taso',
+    'This training includes' => 'Tämä koulutus sisältää',
+    'Max Student' => 'Maksimum Öğrenci',
+    'Start training' => 'Aloita harjoittelu',
+    'Duration' => 'Kesto'
 ];

@@ -141,7 +141,6 @@ class CourseResource extends Resource
                             ->numeric(),
                         TextInput::make('price')
                             ->label('Price')
-                            ->required()
                             ->numeric()
                             ->minValue(0)
                             ->prefix('EUR'),

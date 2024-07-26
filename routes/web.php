@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LanguageController;
+use App\Livewire\AboutPage;
 use App\Livewire\Auth\ForgotPasswordPage;
 use App\Livewire\Auth\LoginPage;
 use App\Livewire\Auth\RegisterPage;
@@ -20,7 +21,10 @@ use App\Livewire\HomePage;
 use App\Livewire\ImagePage;
 use App\Livewire\MyOrderDetailPage;
 use App\Livewire\MyOrdersPage;
+use App\Livewire\ProjectDetailPage;
+use App\Livewire\ProjectPage;
 use App\Livewire\ServiceDetailPage;
+use App\Livewire\SolutionPartnerPage;
 use App\Livewire\SuccessPage;
 use App\Livewire\VideoPage;
 use App\Livewire\WorkshopDetailPage;
@@ -30,11 +34,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/lang',[LanguageController::class , 'change'])->name('user.lang');
 
 Route::get('/', HomePage::class);
+Route::prefix('about')->group(function () {
+    Route::get('/', AboutPage::class);
+    Route::get('/solution-partner', SolutionPartnerPage::class);
+    Route::get('/projects', ProjectPage::class);
+    Route::get('/projects/{slug}', ProjectDetailPage::class);
+});
 Route::get('/currency/{currency}', [LanguageController::class, 'setCurrency'])->name('currency.set');
 Route::prefix('courses')->group(function () {
     Route::get('/', CoursesPage::class);
     Route::get('/categories', CategoriesPage::class);
-    Route::get('/courses/{course}', CourseDetailPage::class);
+    Route::get('/{slug}', CourseDetailPage::class);
 });
 
 Route::prefix('services')->group(function () {

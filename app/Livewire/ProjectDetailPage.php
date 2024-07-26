@@ -2,13 +2,13 @@
 
 namespace App\Livewire;
 
-use App\Models\Course;
+use App\Models\Project;
 use Illuminate\Support\Facades\App;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-#[Title('Course Details Page')]
-class CourseDetailPage extends Component
+#[Title('Blog Details')]
+class ProjectDetailPage extends Component
 {
     public $slug;
 
@@ -25,23 +25,23 @@ class CourseDetailPage extends Component
             $lang = App::getLocale();
         }
 
-        $course = null;
+        $project = null;
         $matchedLanguage = null;
 
-        if ($course = Course::where('slug', $this->slug)->first()) {
+        if ($project = Project::where('slug', $this->slug)->first()) {
             $matchedLanguage = 'tr';
-        } elseif ($course = Course::where('slug_en', $this->slug)->first()) {
+        } elseif ($project = Project::where('slug_en', $this->slug)->first()) {
             $matchedLanguage = 'en';
-        } elseif ($course = Course::where('slug_fi', $this->slug)->first()) {
+        } elseif ($project = Project::where('slug_fi', $this->slug)->first()) {
             $matchedLanguage = 'fi';
         }
 
-        if (!$course) {
+        if (!$project) {
             abort(404);
         }
 
-        return view('livewire.course-detail-page', [
-            'course' => $course,
+        return view('livewire.project-detail-page', [
+            'project' => $project,
             'matchedLanguage' => $matchedLanguage,
             'lang' => $lang,
         ]);

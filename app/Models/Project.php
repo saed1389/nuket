@@ -5,13 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Additive extends Model
+class Project extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'name',
+        'title',
         'slug',
+        'title_en',
+        'slug_en',
+        'title_fi',
+        'slug_fi',
         'description',
         'description_en',
         'description_fi',

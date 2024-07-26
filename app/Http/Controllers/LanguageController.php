@@ -10,25 +10,15 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
 
 class LanguageController extends Controller
-
 {
-
     public function change(Request $request)
-
     {
-
         $lang = $request->input('lang');
-
         if (!in_array($lang, ['tr', 'en', 'fi'])) {
-
             abort(400);
-
         }
-
         Session::put('locale', $lang);
-
         return redirect()->back();
-
     }
 
     public function setCurrency($currency)

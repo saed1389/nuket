@@ -72,5 +72,13 @@ return [
     'Our Blogs' => 'Bloglarımız',
     'home page blog description' => 'Bu bölümde düşüncelerimizi, duygularımızı ve deneyimlerimizi sizlerle paylaşıyoruz!',
     'Interpretation' => 'Tercüme',
-    'search' => 'Ara'
+    'search' => 'Ara',
+    'We found :count courses available for you' => 'Sizin için :count kurs bulduk',
+    'Trainer' => 'Eğitmen',
+    'Training Description' => 'Eğitim Açıklaması',
+    'level' => 'Seviye',
+    'This training includes' => 'Bu eğitim şunları içerir',
+    'Max Student' => 'Max opiskelija',
+    'Start training' => 'Eğitime başlayın',
+    'Duration' => 'Süre'
 ];

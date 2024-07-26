@@ -193,11 +193,17 @@
                                         @if($locale == 'tr') {{ $course->name }} @else {{ $course->{'name_' . $locale} }} @endif
                                     </a>
                                 </h4>
-                                @if($course->discount)
-                                    <div class="price">{{ $course->courrency . ' '.$course->discount }}  <span>{{ $course->courrency . ' '.$course->price }}</span></div>
+                                <div class="uni-name">@if($locale == 'tr') {{ $course->category->name }} @else {{ $course->category->{'name_' . $locale} }} @endif</div>
+                                @if($course->price)
+                                    @if($course->discount)
+                                        <div class="price">{{ \Illuminate\Support\Number::currency($course->discount, 'EUR') }}  <span>{{ \Illuminate\Support\Number::currency($course->price, 'EUR') }}</span></div>
+                                    @else
+                                        <div class="price">{{ \Illuminate\Support\Number::currency($course->price, 'EUR') }} </div>
+                                    @endif
                                 @else
-                                    <div class="price">{{ $course->courrency . ' '.$course->price }} </div>
+                                    <div class="price"> - </div>
                                 @endif
+
                                 <div class="clearfix">
                                     <div class="pull-right">
                                         <a href="@if($locale == 'tr') {{ '/courses/'.$course->slug }} @else {{ '/courses/'.$course->{'slug_' . $locale} }} @endif" class="enroll-now">{{ __('homePage.ENROL NOW') }}</a>
