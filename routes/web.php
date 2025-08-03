@@ -11,6 +11,7 @@ use App\Livewire\BlogPage;
 use App\Livewire\CancelPage;
 use App\Livewire\CartPage;
 use App\Livewire\CategoriesPage;
+use App\Livewire\CategoryDetailPage;
 use App\Livewire\CheckoutPage;
 use App\Livewire\CoachingPage;
 use App\Livewire\ContactPage;
@@ -25,6 +26,7 @@ use App\Livewire\ProjectDetailPage;
 use App\Livewire\ProjectPage;
 use App\Livewire\ServiceDetailPage;
 use App\Livewire\SolutionPartnerPage;
+use App\Livewire\SolutionPartnerDetailPage;
 use App\Livewire\SuccessPage;
 use App\Livewire\VideoPage;
 use App\Livewire\WorkshopDetailPage;
@@ -37,6 +39,7 @@ Route::get('/', HomePage::class);
 Route::prefix('about')->group(function () {
     Route::get('/', AboutPage::class);
     Route::get('/solution-partner', SolutionPartnerPage::class);
+    Route::get('/solution-partner-detail/{id}', SolutionPartnerDetailPage::class)->name('about.solution.partner');
     Route::get('/projects', ProjectPage::class);
     Route::get('/projects/{slug}', ProjectDetailPage::class);
 });
@@ -45,6 +48,10 @@ Route::prefix('courses')->group(function () {
     Route::get('/', CoursesPage::class);
     Route::get('/categories', CategoriesPage::class);
     Route::get('/{slug}', CourseDetailPage::class);
+});
+
+Route::prefix('categories')->group(function () {
+    Route::get('/{slug}', CategoryDetailPage::class);
 });
 
 Route::prefix('services')->group(function () {

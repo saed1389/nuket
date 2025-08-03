@@ -47,7 +47,7 @@
                             <div class="image-column col-lg-6 col-md-6 col-sm-12">
                                 <div class="inner-column">
                                     <div class="image">
-                                        <img class="rounded" src="{{ url('storage', $blog->image) }}" alt="@if($lang == 'tr') {{ $blog->blogCategory->name }} @else {{ $blog->blogCategory->{'name_' . $lang} }} @endif">
+                                        <img class="rounded" src="{{ asset($blog->image) }}" alt="@if($lang == 'tr') {{ $blog->blogCategory->name }} @else {{ $blog->blogCategory->{'name_' . $lang} }} @endif">
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +89,7 @@
                                 <div class="widget-content">
                                     <article class="post">
                                         <figure class="post-thumb">
-                                            <img src="{{ url('storage', $item->image) }}" alt="@if($lang == 'tr') {{ $item->title }} @else {{ $item->{ 'title_'.$lang } }} @endif">
+                                            <img src="{{ asset($item->image) }}" alt="@if($lang == 'tr') {{ $item->title }} @else {{ $item->{ 'title_'.$lang } }} @endif">
                                             <a href="@if($lang == 'tr') {{ '/blog/'.$item->slug }} @else {{ '/blog/'.$item->{'slug_' . $lang} }} @endif" class="overlay-box">
                                                 <span class="icon fa fa-link"></span>
                                             </a>

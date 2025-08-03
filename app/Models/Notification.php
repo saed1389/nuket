@@ -5,17 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Partner extends Model
+class Notification extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'title',
-        'image',
-        'link',
-        'description',
-        'description_en',
-        'description_fi',
-        'status'
+        'title'
     ];
 }

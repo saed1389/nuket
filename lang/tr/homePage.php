@@ -80,5 +80,11 @@ return [
     'This training includes' => 'Bu eğitim şunları içerir',
     'Max Student' => 'Max opiskelija',
     'Start training' => 'Eğitime başlayın',
-    'Duration' => 'Süre'
+    'Duration' => 'Süre',
+    'Need some help?' => 'Yardıma mı ihtiyacınız var?',
+    'about description 1' => 'İlk, orta ve lise öğrenimini İzmir\'de tamamlamıştır. Dokuz Eylül Üniversitesi Turizm ve Otel İşletmeciliği bölümünden mezun olan Gülnaz, uzun yıllar boyunca uluslararası otel zincirlerinde operasyon süreçlerini başarıyla yönetmiştir. Turizm sektöründe kariyerine devam ederken aynı zamanda sağırlara yönelik sosyal sorumluluk projelerine de destek veren Gülnaz, sağırların yaşadığı sorunlara dikkat çekmek amacıyla Türk İşaret Dilini öğrenmiştir. İşaret dili eğitmeni, tercüman ve koç olarak kariyerine devam eden Gülnaz, sağırlara ve sağırlarla iletişim kuran bireylere işaret dillerinde koçluk yapmakta ve koçluk eğitimleri vermektedir.',
+    'about description 2' => 'Yirmi yılı aşkın süredir turizm sektöründe yöneticilik yapan ve operasyon süreçlerini başarıyla yöneten Özgür, turizm sektöründe kariyerine devam ederken mutfak sanatlarında uluslararası eğitimler alarak kariyerine gastronomi alanında devam etmektedir. Gastronomi alanında sağırlara yönelik meslek edindirme projelerinde eğitmen şef olarak görev alan Özgür, sağır bireylerin bu alanda kariyer yapabilmeleri için eğitimler vermekte olup aynı zamanda turizm ve otelcilik alanında uluslararası kurum ve kuruluşlara danışmanlık yapmaktadır.',
+    'about description 3' => 'Ege Üniversitesi İletişim Fakültesi Halkla İlişkiler ve Tanıtım bölümünde doktora eğitimini tamamlamıştır. Doktora tezi ve çalışmaları sağır bireylerin dijital platformları kullanımına yönelik olan Nüket, sağır bireyler ve sağır kültürü üzerine akademik çalışmalarına devam etmektedir. Farklı alanlarda pek çok proje yöneten Nüket mutfak sanatları eğitimi almıştır. Sağır bireylerin mutfak sanatları alanında meslek edinebilmeleri için proje çalışmalarına devam eden Nüket sağır bireyler için mutfak sanatları alanında eğitim materyalleri hazırlamaktadır.',
+    'Founder' => 'Kurucu',
+    'Olektia Oy is a member of The Helsinki Region Chamber of Commerce' => 'Olektia Oy, Helsinki Bölgesi Ticaret Odası üyesidir.'
 ];

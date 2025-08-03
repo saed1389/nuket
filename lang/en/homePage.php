@@ -80,5 +80,11 @@ return [
     'This training includes' => 'This training includes',
     'Max Student' => 'Max Student',
     'Start training' => 'Start training',
-    'Duration' => 'Duration'
+    'Duration' => 'Duration',
+    'Need some help?' => 'Need some help?',
+    'about description 1' => 'She completed her education in Izmir. After graduating from Dokuz Eylül University, Department of Tourism and Hotel Management, Gulnaz successfully managed operation processes in international hotel chains for many years. While continuing her career in the tourism sector, Gulnaz also supported social responsibility projects for deaf and learned Turkish Sign Language to draw attention to the problems faced by deaf. Continuing her career as a sign language trainer, interpreter and coach, Gulnaz coaches deaf and people who communicate with deaf  in sign languages and provides coaching trainings. ',
+    'about description 2' => 'Ozgur, who has been a manager in the tourism sector for more than twenty years and has successfully managed operation processes, continues his career in gastronomy by receiving international trainings in culinary arts while continuing his career in the tourism sector. Ozgur, who works as a trainer chef in vocational training projects for deaf in the field of gastronomy, provides trainings for deaf to pursue a career in this field and also provides consultancy to international institutions and organizations in the field of tourism and hotel management.',
+    'about description 3' => 'She completed her PhD at Ege University, Faculty of Communication, Department of Public Relations and Publicity. Nuket, whose doctoral thesis and studies focused on the use of digital platforms by deaf people, continues her academic studies on deaf culture. Nuket, who has managed many projects in different fields, has studied culinary arts. Nuket, who continues to work on projects for deaf people to gain a profession in the field of culinary arts, prepares training materials in the field of culinary arts for deaf.',
+    'Founder' => 'Founder',
+    'Olektia Oy is a member of The Helsinki Region Chamber of Commerce' => 'Olektia Oy is a member of The Helsinki Region Chamber of Commerce',
 ];

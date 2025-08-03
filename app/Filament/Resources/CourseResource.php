@@ -7,6 +7,7 @@ use App\Filament\Resources\CourseResource\RelationManagers;
 use App\Models\Category;
 use App\Models\Course;
 use Filament\Actions\ActionGroup;
+use App\Models\Level;
 use Filament\Forms;
 use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Select;
@@ -98,7 +99,6 @@ class CourseResource extends Resource
                             ->columnSpanFull(),
                         MarkdownEditor::make('description_fi')
                             ->label('Description (fi)')
-                            ->columnSpanFull()
                             ->columnSpanFull(),
                         TextInput::make('intro_video')
                             ->label('Intro Video Link')

@@ -6,6 +6,7 @@ use App\Filament\Resources\PartnerResource\Pages;
 use App\Filament\Resources\PartnerResource\RelationManagers;
 use App\Models\Partner;
 use Filament\Forms;
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -33,6 +34,15 @@ class PartnerResource extends Resource
                     ->maxLength(255)
                     ->url()
                     ->default(null),
+                MarkdownEditor::make('description')
+                    ->label('Description (tr)')
+                    ->columnSpanFull(),
+                MarkdownEditor::make('description_en')
+                    ->label('Description (en)')
+                    ->columnSpanFull(),
+                MarkdownEditor::make('description_fi')
+                    ->label('Description (fi)')
+                    ->columnSpanFull(),
                 Forms\Components\FileUpload::make('image')
                     ->directory('partners')
                     ->imageEditor()

@@ -80,5 +80,11 @@ return [
     'This training includes' => 'Tämä koulutus sisältää',
     'Max Student' => 'Maksimum Öğrenci',
     'Start training' => 'Aloita harjoittelu',
-    'Duration' => 'Kesto'
+    'Duration' => 'Kesto',
+    'Need some help?' => 'Tarvitsetko apua?',
+    'about description 1' => 'Hän suoritti koulutuksensa Izmirissä. Valmistuttuaan Dokuz Eylül -yliopiston matkailu- ja hotellihallinnon laitokselta Gulnaz johti menestyksekkäästi kansainvälisten hotelliketjujen toimintaprosesseja useiden vuosien ajan. Jatkaessaan uraansa matkailualalla Gulnaz tuki myös kuurojen sosiaalisen vastuun hankkeita ja opiskeli turkkia viittomakieltä kiinnittääkseen huomiota kuurojen kohtaamiin ongelmiin. Viittomakielen kouluttajana, tulkkina ja valmentajana uraansa jatkava Gulnaz valmentaa kuuroja ja kuurojen kanssa viittomakielillä kommunikoivia ihmisiä sekä tarjoaa valmennuskoulutuksia.',
+    'about description 2' => 'Yli kaksikymmentä vuotta matkailualan johtajana toiminut ja menestyksekkäästi toimintaprosesseja johtanut Ozgur jatkaa uraansa gastronomian parissa saamalla kansainvälisiä kulinaarisen taiteen koulutusta samalla kun jatkaa uraansa matkailualalla. Ozgur, joka työskentelee kouluttajakokina kuurojen ammatillisissa koulutusprojekteissa gastronomian alalla, tarjoaa kuuroille koulutusta uran jatkamiseksi tällä alalla sekä konsultoi kansainvälisiä instituutioita ja organisaatioita matkailun ja hotellihallinnon alalla.',
+    'about description 3' => 'Hän valmistui tohtoriksi Ege-yliopiston viestinnän tiedekunnan PR- ja julkisuuden laitokselta. Nuket, jonka väitöskirja ja tutkimukset keskittyivät kuurojen digitaalisten alustojen käyttöön, jatkaa kuurojen kulttuurin akateemisia opintojaan. Monia eri alojen projekteja johtanut Nuket on opiskellut ruoanlaittotaidetta. Nuket, joka jatkaa työskentelyä kuuroille suunnattujen hankkeiden parissa saadakseen ammatin kulinaarisen taiteen alalla, valmistelee koulutusmateriaaleja kuurojen kulinaarisen taiteen alalla.',
+    'Founder' => 'Perustaja',
+    'Olektia Oy is a member of The Helsinki Region Chamber of Commerce' => 'Olektia Oy on Helsingin seudun kauppakamarin jäsen'
 ];

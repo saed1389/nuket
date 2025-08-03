@@ -66,16 +66,16 @@ class BlogResource extends Resource
                     ->unique(Blog::class, 'slug_fi', ignoreRecord: true)
                     ->maxLength(255)
                     ->default(null),
-                Forms\Components\MarkdownEditor::make('description')
+                Forms\Components\RichEditor::make('description')
                     ->label('Description (tr)')
                     ->fileAttachmentsDirectory('blog')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\MarkdownEditor::make('description_en')
+                Forms\Components\RichEditor::make('description_en')
                     ->label('Description (en)')
                     ->fileAttachmentsDirectory('blog')
                     ->columnSpanFull(),
-                Forms\Components\MarkdownEditor::make('description_fi')
+                Forms\Components\RichEditor::make('description_fi')
                     ->label('Description (fi)')
                     ->fileAttachmentsDirectory('blog')
                     ->columnSpanFull(),

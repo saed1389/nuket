@@ -30,10 +30,10 @@
                         <div class="team-block col-lg-4 col-md-6 col-sm-12">
                             <div class="inner-box">
                                 <div class="image">
-                                    <a href="javascript: void (0)"><img src="{{ url('storage', $additive->image) }}" alt="{{ $additive->name }}" /></a>
+                                    <a href="{{ route('about.solution.partner', $additive->id) }}"><img src="{{ url('storage', $additive->image) }}" alt="{{ $additive->name }}" /></a>
                                 </div>
                                 <div class="lower-content">
-                                    <h5><a href="javascript: void (0)">{{ $additive->name }}</a></h5>
+                                    <h5><a href="j{{ route('about.solution.partner', $additive->id) }}">{{ $additive->name }}</a></h5>
                                 </div>
                             </div>
                         </div>

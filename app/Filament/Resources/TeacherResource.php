@@ -61,10 +61,13 @@ class TeacherResource extends Resource
                             ->hint('* Image size should be 800*920 px')
                             ->hintColor('danger')
                             ->image()
+                            ->disk('public')
+                            ->visibility('public')
                             ->imageEditor()
-                            ->directory('teachers')
+                            ->directory('uploads/teachers')
                             ->imageEditorViewportWidth('800')
                             ->imageEditorViewportHeight('920'),
+
                         Forms\Components\TextInput::make('support_video')
                             ->maxLength(255)
                             ->url()

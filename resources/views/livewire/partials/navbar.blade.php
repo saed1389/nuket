@@ -20,10 +20,11 @@
                                 <li class="dropdown has-mega-menu"><a href="#"><span>{{ __('homePage.categories') }} <i class="fa fa-arrow-down"></i></span></a>
                                     <div class="mega-menu">
                                         <div class="upper-box">
+                                            &nbsp;
                                             <div class="page-links-box">
                                                 @foreach($categories as $category)
-                                                    <a href="@if($locale == 'tr') {{ $category->slug }} @else {{ $category->{'slug_' . $locale} }} @endif" class="link" wire:key="{{ $category->id }}">
-                                                        @if($locale == 'tr') {{ $category->name }} @else {{ $category->{'name_' . $locale} }} @endif
+                                                    <a href="@if (session('locale') ? session('locale') == 'tr' : $app == 'tr') /categories/{{ $category->slug }} @else categories/{{ $category->{'slug_' . $locale} }} @endif" class="link" wire:key="{{ $category->id }}">
+                                                        @if (session('locale') ? session('locale') == 'tr' : $app == 'tr') {{ $category->name }} @else {{ $category->{'name_' . $locale} }} @endif
                                                     </a>
                                                 @endforeach
                                             </div>
@@ -69,40 +70,17 @@
                     </nav>
 
                     <div class="outer-box clearfix">
-                        {{--<div class="search-box">
-                            <form method="post" action="">
-                                <div class="form-group">
-                                    <input type="search" name="search-field" value="" placeholder="{{ __('homePage.search') }}" required>
-                                    <button type="submit"><span class="icon fa fa-search"></span></button>
-                                </div>
-                            </form>
-                        </div>--}}
-                        {{--<li class="nav-item dropdown web-drop">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="{{ asset('assets/front/img').'/'.getCurrentCurrency().'.png' }}" alt=""> {{ strtoupper(getCurrentCurrency()) }}
-                            </a>
-                            <ul class="dropdown-menu drop-money " aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item {{ (getCurrentCurrency() == "usd") ? "d-none" : "" }}" href="{{ route('currency.set', ['currency' => 'usd']) }}"> <img src="{{ asset('assets/front/img/usd.png') }}" alt=""> USD </a></li>
-                                <li><a class="dropdown-item {{ (getCurrentCurrency() == "try") ? "d-none" : "" }}" href="{{ route('currency.set', ['currency' => 'try']) }}"> <img src="{{ asset('assets/front/img/try.png') }}" alt=""> TRY </a></li>
-                                <li><a class="dropdown-item {{ (getCurrentCurrency() == "eur") ? "d-none" : "" }}" href="{{ route('currency.set', ['currency' => 'eur']) }}"> <img src="{{ asset('assets/front/img/eur.png') }}" alt=""> EUR </a></li>
-                                <li><a class="dropdown-item {{ (getCurrentCurrency() == "gbp") ? "d-none" : "" }}" href="{{ route('currency.set', ['currency' => 'gbp']) }}"> <img src="{{ asset('assets/front/img/gbp.png') }}" alt=""> GBP </a></li>
-                            </ul>
-                        </li>--}}
                         <div class="cart-box">
                             <form id="langform" action="{{ route('user.lang') }}" method="get">
-                                <select class="form-select" name="lang" id="lang" onchange="this.form.submit()">
+                                <select class="form-control" name="lang" id="lang" onchange="this.form.submit()">
                                     <option disabled>Language</option>
-
                                     <option value="tr" @if (session('locale') ? session('locale') == 'tr' : $app == 'tr') selected @endif> Turkish</option>
-
                                     <option value="en" @if (session('locale') ? session('locale') == 'en' : $app == 'en') selected @endif> English</option>
-
                                     <option value="fi" @if (session('locale') ? session('locale') == 'fi' : $app == 'fi') selected @endif> Fine</option>
                                 </select>
                             </form>
                         </div>
-
-                        <div class="cart-box">
+                        {{--<div class="cart-box">
                             <div class="dropdown">
                                 <button class="cart-box-btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="flaticon-shopping-bag-1"></span><span class="total-cart">2</span></button>
                                 <div class="dropdown-menu pull-right cart-panel" aria-labelledby="dropdownMenu1">
@@ -124,8 +102,8 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-                        <div class="nav-btn navSidebar-button"><span class="icon flaticon-menu-4"></span></div>
+                        </div>--}}
+                        {{--<div class="nav-btn navSidebar-button"><span class="icon flaticon-menu-4"></span></div>--}}
                     </div>
                 </div>
             </div>
@@ -154,7 +132,7 @@
             </nav>
         </div>
     </header>
-    <div class="xs-sidebar-group info-group">
+    {{--<div class="xs-sidebar-group info-group">
         <div class="xs-overlay xs-bg-black"></div>
         <div class="xs-sidebar-widget">
             <div class="sidebar-widget-container">
@@ -180,18 +158,18 @@
                                 </ul>
                             </div>
                             <ul class="social-box">
-                                <li class="facebook"><a href="#" class="fa fa-facebook-f"></a></li>
-                                <li class="twitter"><a href="#" class="fa fa-twitter"></a></li>
-                                <li class="linkedin"><a href="#" class="fa fa-linkedin"></a></li>
-                                <li class="instagram"><a href="#" class="fa fa-instagram"></a></li>
-                                <li class="youtube"><a href="#" class="fa fa-youtube"></a></li>
+                                <li class="facebook"><a href="https://www.facebook.com/Olektia" target="_blank" class="fa fa-facebook-f"></a></li>
+                                <li class="twitter"><a href="https://x.com/olektia" target="_blank" class="fa fa-twitter"></a></li>
+                                <li class="linkedin"><a href="https://www.linkedin.com/in/olektia-olektia-b0478031b/" target="_blank" class="fa fa-linkedin"></a></li>
+                                <li class="instagram"><a href="https://www.instagram.com/olektia" target="_blank" class="fa fa-instagram"></a></li>
+                                <li class="pinterest"><a href="https://www.pinterest.com/olektia/" target="_blank" class="fa fa-pinterest"></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>--}}
     {{--<script>
         document.getElementById("navbarDropdown2").addEventListener("click", function() {
             var dropdownMenu = document.getElementById("navbarDropdown2-ul");
