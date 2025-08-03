@@ -102,6 +102,20 @@
                             <img src="{{ asset('assets/images/resource/benefit-2.png') }}" alt="" />
                         </div>
                     </div>
+                    <div class="mb-5 clearfix">
+
+                    </div>
+                    <div class="inner-column mt-5 text-center">
+                        <p class="font-weight-bold mx-3" style="color: #06092d; font-size: 15px;">{{ __('homePage.Olektia Oy is a member of The Helsinki Region Chamber of Commerce') }}</p>
+
+                        <p class="mt-3">
+                            @if(app()->getLocale() == 'fi')
+                                <img src="{{ asset('assets/images/log.jpg') }}" class="img-thumbnail w-25" alt>
+                            @else
+                                <img src="{{ asset('assets/images/log1.jpg') }}" class="img-thumbnail w-25" alt>
+                            @endif
+                        </p>
+                    </div>
                 </div>
                 <div class="content-column col-lg-5 col-md-12 col-sm-12">
                     <div class="inner-column">
